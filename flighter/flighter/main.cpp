@@ -49,7 +49,7 @@ int main()
 //
     // Load a music to play
     sf::Music music;
-    if (!music.openFromFile("/Users/wangyanpu/Desktop/台灣大學/大二上/程設設計/期末報告/final_project/final_project/Resources/nice_music.ogg")) {
+    if (!music.openFromFile("nice_music.ogg")) {
         return EXIT_FAILURE;
     }
 
@@ -63,7 +63,7 @@ int main()
     sf::Texture playerTexture;
     float speed = 500.f;
     
-    if(!playerTexture.loadFromFile("/Users/wangyanpu/Desktop/台灣大學/大二上/程設設計/期末報告/flighter/Resourses/plane.png")) //load the texture from an image
+    if(!playerTexture.loadFromFile("plane.png")) //load the texture from an image
     {
         cout << "ERROR: FILE COULDN'T BE LOADED" << endl; //falback message
     }
