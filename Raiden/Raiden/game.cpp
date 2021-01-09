@@ -9,6 +9,8 @@
 #include "game.hpp"
 
 #include "enemy.hpp"
+#include "Firebullet.hpp"
+#include <vector>
 
 Game::Game() { ; }
 
@@ -27,6 +29,7 @@ void Game::run() {
   Sprite vesta(t_vesta);
   Sprite plane(t_plane);
 
+  window.setKeyRepeatEnabled(true);
   Vector2u planeSize;
   plane.setScale(0.4, 0.4);
   vesta.setPosition(0, 0);
@@ -36,6 +39,11 @@ void Game::run() {
   float timer = 0, delay = 0.1;
   double dt;
   float speed = 500;
+  std::vector<FBullet> bulletvec;
+  bool isFiring = false;
+
+  
+
 
   while (window.isOpen()) {
     float dt = clock.restart().asSeconds();
@@ -76,12 +84,29 @@ void Game::run() {
                           plane.getPosition().y);
     }
 
+    if(Keyboard::isKeyPressed(Keyboard::Space)){
+            std::cout << "S";
+            isFiring = true;
+        }
+
     if (timer > delay) {
       timer = 0;
       tick();
     }
 
     window.clear();
+
+    if(isFiring == true){
+        FBullet newBullet(sf::Vector2f(5,50));
+        newBullet.setPos(sf::Vector2f(plane.getPosition().x,plane.getPosition().y));
+        bulletvec.push_back(newBullet);
+        isFiring = false;
+        }
+
+        for(int i = 0; i < bulletvec.size();i++){
+            bulletvec[i].draw(window);
+            bulletvec[i].fire(3);
+        }
 
     window.draw(vesta);
     window.draw(plane);
