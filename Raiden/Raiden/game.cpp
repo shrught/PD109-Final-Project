@@ -7,10 +7,16 @@
 //
 
 #include "game.hpp"
-//#include<unistd.h>
-//#include <vector>
-//#include "enemy.hpp"
-//#include "Firebullet.hpp"
+
+
+#include <unistd.h>
+#include <cstdlib>
+#include <ctime>
+#include <vector>
+
+
+#include "Firebullet.hpp"
+#include "enemy.hpp"
 
 Game::Game() { ; }
 
@@ -49,11 +55,8 @@ void Game::run() {
   bool isFiring = false;
     bool isFiring2 = false;
 
-  
 
-
-  while (window.isOpen())
-  {
+  while (window.isOpen()) {
     float dt = clock.restart().asSeconds();
     clock.restart();
     timer += dt;
@@ -66,6 +69,23 @@ void Game::run() {
     }
 
     
+    // random enemy
+    /* 固定亂數種子 */
+//    srand(5);
+//    int pos_x = rand() % 100;
+//    srand(30);
+//    int pos_y = rand() % 300;
+//    Enemy dog(pos_x, pos_y, 1, window);
+//    time_t first = time(NULL) + 10;
+
+//    int seconds = 0;
+//    while (true) {
+//      if (time(NULL) >= first) {
+//        first = time(NULL) + 10;  // Saves the time additional 10 seconds ahead from now!
+//        dog.run(window);
+//        seconds = 0;  // Resets the secondcounter.
+//      }
+//    }
 
     if (Keyboard::isKeyPressed(Keyboard::W)) {
       plane.move(0.f, -speed * dt);
@@ -92,9 +112,8 @@ void Game::run() {
                           plane.getPosition().y);
     }
 
-    if(Keyboard::isKeyPressed(Keyboard::LShift)){
+    if(Keyboard::isKeyPressed(Keyboard::LShift))
             isFiring = true;
-    }
     
       if (Keyboard::isKeyPressed(Keyboard::Enter))
       {
@@ -137,12 +156,11 @@ void Game::run() {
 
 
     window.clear();
-    
     window.draw(vesta);
     window.draw(plane);
       if (playerNum == 2)
           window.draw(plane2);
-    Enemy dog(400, 400, 1, &window);
+    Enemy dog(400, 400, 1, window);
 
     if(isFiring == true){
         FBullet newBulletLeft(sf::Vector2f(10,20));
@@ -178,6 +196,7 @@ void Game::run() {
           bulletvecRight2[i].fire(2);
 
       }
+
     window.display();
   }
 }

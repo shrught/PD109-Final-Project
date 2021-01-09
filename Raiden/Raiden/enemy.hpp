@@ -9,18 +9,17 @@ using namespace sf;
 
 class Enemy {
  public:
-  Enemy(float x_, float y_, float speed, RenderWindow*);
+  Enemy(float x_, float y_, float speed, RenderWindow&);
   Sprite pdogs;
 
+  void run(RenderWindow& window);
+
  private:
-  Texture graphic;
-  void update();
-
-  // float distance;
+  float x_;
+  float y_;
   float speed;
+  Texture graphic;
+    void update();
 
-  // void update(float dt);
-
-  void render(sf::RenderTarget& target);
 };
 
