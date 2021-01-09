@@ -22,8 +22,8 @@ Game::~Game()
 void Game::run()
 {
     Texture t_vesta, t_plane;
-    t_vesta.loadFromFile("../Resources/images/Vesta.jpg");
-    t_plane.loadFromFile("../Resources/images/plane.png");
+    t_vesta.loadFromFile("Raiden/Resources/images/Vesta.jpg");
+    t_plane.loadFromFile("Raiden/Resources/images/plane.png");
     RenderWindow window(VideoMode(WIDTH, HEIGHT), "RAIDEN");
     
     Sprite vesta(t_vesta);
@@ -53,14 +53,12 @@ void Game::run()
         
         if(Keyboard::isKeyPressed(Keyboard::W))
         {
-            std::cout << "W";
             plane.move(0.f, -speed * dt);
             if (plane.getPosition().y <= 0) //Left
                 plane.setPosition(plane.getPosition().x, 0.f);
         }
         if(Keyboard::isKeyPressed(Keyboard::S))
         {
-            std::cout << "S";
             plane.move(0.f, speed * dt);
             if (plane.getPosition().y >= window.getSize().y - plane.getGlobalBounds().height) //Bottom
                 plane.setPosition(plane.getPosition().x, window.getSize().y - plane.getGlobalBounds().height);
@@ -70,14 +68,12 @@ void Game::run()
         }
         if(Keyboard::isKeyPressed(Keyboard::A))
         {
-            std::cout << "A";
             plane.move(-speed * dt * 1.2, 0.f);
             if (plane.getPosition().x <= 0) //Left
                 plane.setPosition(0.f, plane.getPosition().y);
         }
         if(Keyboard::isKeyPressed(Keyboard::D))
         {
-            std::cout << "D";
             plane.move(speed * dt * 1.2, 0.f);
             if (plane.getPosition().x >= window.getSize().x - plane.getGlobalBounds().width) //Right
                 plane.setPosition(window.getSize().x - plane.getGlobalBounds().width, plane.getPosition().y);
