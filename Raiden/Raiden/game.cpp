@@ -10,6 +10,8 @@
 
 #include <unistd.h>
 
+#include <cstdlib>
+#include <ctime>
 #include <vector>
 
 #include "Firebullet.hpp"
@@ -58,13 +60,19 @@ void Game::run() {
     }
 
     // random enemy
-    Enemy dog(400,400,1,window);
+    /* 固定亂數種子 */
+    srand(5);
+    int pos_x = rand() % 100;
+    srand(30);
+    int pos_y = rand() % 300;
+    Enemy dog(pos_x, pos_y, 1, window);
     time_t first = time(NULL) + 10;
 
     int seconds = 0;
     while (true) {
       if (time(NULL) >= first) {
-        first = time(NULL) + 10;  // Saves the time additional 10 seconds ahead from now!
+        first = time(NULL) +
+                10;  // Saves the time additional 10 seconds ahead from now!
         dog.run();
         seconds = 0;  // Resets the secondcounter.
       }
