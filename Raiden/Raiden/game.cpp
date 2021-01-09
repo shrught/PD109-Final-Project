@@ -7,7 +7,7 @@
 //
 
 #include "game.hpp"
-
+#include<unistd.h>
 #include "enemy.hpp"
 #include "Firebullet.hpp"
 #include <vector>
@@ -94,9 +94,8 @@ void Game::run() {
     }
 
     if(Keyboard::isKeyPressed(Keyboard::Space)){
-            std::cout << "S";
             isFiring = true;
-        }
+    }
 
     if (timer > delay) {
       timer = 0;
@@ -107,9 +106,14 @@ void Game::run() {
 
     window.clear();
 
+  
+
+    window.draw(vesta);
+    window.draw(plane);
+
     if(isFiring == true){
-        FBullet newBullet(sf::Vector2f(5,50));
-        newBullet.setPos(sf::Vector2f(plane.getPosition().x,plane.getPosition().y));
+        FBullet newBullet(sf::Vector2f(10,20));
+        newBullet.setPos(sf::Vector2f((plane.getPosition().x+(plane.getGlobalBounds().width)/2),plane.getPosition().y));
         bulletvec.push_back(newBullet);
         isFiring = false;
         }
@@ -117,10 +121,8 @@ void Game::run() {
         for(int i = 0; i < bulletvec.size();i++){
             bulletvec[i].draw(window);
             bulletvec[i].fire(3);
-        }
 
-    window.draw(vesta);
-    window.draw(plane);
+        }
     window.display();
   }
 }
