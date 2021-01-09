@@ -18,7 +18,10 @@ using namespace sf;
 class Game
 {
 private:
-    
+    Sprite vesta;
+    Sprite plane;
+    Texture t_vesta;
+    Texture t_plane;
 public:
     Game(); // init
     ~Game();
@@ -27,5 +30,6 @@ public:
 
     void run();
     void tick();
+    void render();
 };
 

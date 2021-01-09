@@ -23,7 +23,10 @@ class Enemy {
 };
 
 Enemy::Enemy(float x_, float y_, float speed, RenderWindow& window) {
-  graphic.loadFromFile("Raiden/Resources/images/pdogs.png");
+  //graphic.loadFromFile("Raiden/Resources/images/pdogs.png");
+  graphic.loadFromFile("../Resources/images/pdogs.png");
+    
+    pdogs.setTexture(graphic);
 
   pdogs.setPosition(Vector2f(x_, y_));
   window.draw(pdogs);
@@ -38,6 +41,7 @@ void Enemy::update() {
   double dt;
   dt = clock.restart().asSeconds();
   pdogs.move(0, speed * dt);
+    
 }
 
 // const int MAX_ENTITES = 100;

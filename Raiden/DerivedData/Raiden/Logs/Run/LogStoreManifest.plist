@@ -108,6 +108,40 @@
 			<key>uniqueIdentifier</key>
 			<string>0BD7617E-D153-4927-9259-ABA58BE4B1ED</string>
 		</dict>
+		<key>0ED67A31-9746-44EA-949A-46FCB6FD2F91</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>0ED67A31-9746-44EA-949A-46FCB6FD2F91.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Raiden project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Raiden</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Raiden</string>
+			<key>timeStartedRecording</key>
+			<real>631878323.96922302</real>
+			<key>timeStoppedRecording</key>
+			<real>631878333.19990599</real>
+			<key>title</key>
+			<string>Run Raiden</string>
+			<key>uniqueIdentifier</key>
+			<string>0ED67A31-9746-44EA-949A-46FCB6FD2F91</string>
+		</dict>
 		<key>0F56C961-9022-4913-8778-A2697A353C06</key>
 		<dict>
 			<key>className</key>
@@ -1026,6 +1060,74 @@
 			<key>uniqueIdentifier</key>
 			<string>50313ED8-EBAF-4C8A-AD18-D22E11579D5B</string>
 		</dict>
+		<key>525B4044-519E-4553-BC98-D6A5F9E452C2</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>525B4044-519E-4553-BC98-D6A5F9E452C2.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Raiden project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Raiden</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Raiden</string>
+			<key>timeStartedRecording</key>
+			<real>631875512.40973401</real>
+			<key>timeStoppedRecording</key>
+			<real>631876131.77518904</real>
+			<key>title</key>
+			<string>Run Raiden</string>
+			<key>uniqueIdentifier</key>
+			<string>525B4044-519E-4553-BC98-D6A5F9E452C2</string>
+		</dict>
+		<key>5571FE87-8542-4018-A643-E6230EBB7B55</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>5571FE87-8542-4018-A643-E6230EBB7B55.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Raiden project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Raiden</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Raiden</string>
+			<key>timeStartedRecording</key>
+			<real>631876803.825055</real>
+			<key>timeStoppedRecording</key>
+			<real>631876830.30930901</real>
+			<key>title</key>
+			<string>Run Raiden</string>
+			<key>uniqueIdentifier</key>
+			<string>5571FE87-8542-4018-A643-E6230EBB7B55</string>
+		</dict>
 		<key>5645D739-9ED3-484E-A1F9-F3A7B10BBFE7</key>
 		<dict>
 			<key>className</key>
@@ -1332,6 +1434,108 @@
 			<key>uniqueIdentifier</key>
 			<string>6A5EE108-D4E3-45DD-BD0A-81C2023B434B</string>
 		</dict>
+		<key>6C1F69A6-06A5-40C2-A915-52A2A14FE3D7</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>6C1F69A6-06A5-40C2-A915-52A2A14FE3D7.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Raiden project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Raiden</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Raiden</string>
+			<key>timeStartedRecording</key>
+			<real>631876421.89600396</real>
+			<key>timeStoppedRecording</key>
+			<real>631876444.24837804</real>
+			<key>title</key>
+			<string>Run Raiden</string>
+			<key>uniqueIdentifier</key>
+			<string>6C1F69A6-06A5-40C2-A915-52A2A14FE3D7</string>
+		</dict>
+		<key>6CE63605-A013-42F7-8858-0165113FE1A4</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>6CE63605-A013-42F7-8858-0165113FE1A4.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Raiden project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Raiden</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Raiden</string>
+			<key>timeStartedRecording</key>
+			<real>631876445.567505</real>
+			<key>timeStoppedRecording</key>
+			<real>631876461.69558501</real>
+			<key>title</key>
+			<string>Run Raiden</string>
+			<key>uniqueIdentifier</key>
+			<string>6CE63605-A013-42F7-8858-0165113FE1A4</string>
+		</dict>
+		<key>6DC8D21A-E390-4CA4-B351-D4476CC31241</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>6DC8D21A-E390-4CA4-B351-D4476CC31241.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Raiden project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Raiden</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Raiden</string>
+			<key>timeStartedRecording</key>
+			<real>631877894.35475302</real>
+			<key>timeStoppedRecording</key>
+			<real>631877908.88242602</real>
+			<key>title</key>
+			<string>Run Raiden</string>
+			<key>uniqueIdentifier</key>
+			<string>6DC8D21A-E390-4CA4-B351-D4476CC31241</string>
+		</dict>
 		<key>73D9A4C5-63C0-40D2-83AF-28C2C2FEF7C0</key>
 		<dict>
 			<key>className</key>
@@ -1536,6 +1740,108 @@
 			<key>uniqueIdentifier</key>
 			<string>78ACF945-A928-4A95-8A95-7CE49D8CDEF7</string>
 		</dict>
+		<key>78C142DA-87FA-482B-AE80-27EA198E39CE</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>78C142DA-87FA-482B-AE80-27EA198E39CE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Raiden project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Raiden</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Raiden</string>
+			<key>timeStartedRecording</key>
+			<real>631876775.02815497</real>
+			<key>timeStoppedRecording</key>
+			<real>631876785.29488897</real>
+			<key>title</key>
+			<string>Run Raiden</string>
+			<key>uniqueIdentifier</key>
+			<string>78C142DA-87FA-482B-AE80-27EA198E39CE</string>
+		</dict>
+		<key>7A51DCBC-23B7-444F-8C4A-B95279859DA6</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>7A51DCBC-23B7-444F-8C4A-B95279859DA6.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Raiden project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Raiden</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Raiden</string>
+			<key>timeStartedRecording</key>
+			<real>631877621.78203201</real>
+			<key>timeStoppedRecording</key>
+			<real>631877774.98952901</real>
+			<key>title</key>
+			<string>Run Raiden</string>
+			<key>uniqueIdentifier</key>
+			<string>7A51DCBC-23B7-444F-8C4A-B95279859DA6</string>
+		</dict>
+		<key>7B5E0596-3E03-4FE4-A4C5-3AF1E76BD64F</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>7B5E0596-3E03-4FE4-A4C5-3AF1E76BD64F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Raiden project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Raiden</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Raiden</string>
+			<key>timeStartedRecording</key>
+			<real>631878349.08597398</real>
+			<key>timeStoppedRecording</key>
+			<real>631878363.12871504</real>
+			<key>title</key>
+			<string>Run Raiden</string>
+			<key>uniqueIdentifier</key>
+			<string>7B5E0596-3E03-4FE4-A4C5-3AF1E76BD64F</string>
+		</dict>
 		<key>7D766C5F-976C-4B23-95D1-4A856537AD14</key>
 		<dict>
 			<key>className</key>
@@ -1603,6 +1909,40 @@
 			<string>Run Raiden</string>
 			<key>uniqueIdentifier</key>
 			<string>7F84371B-DCBC-43ED-9BA6-B2175F7E5A0B</string>
+		</dict>
+		<key>7FE62D58-D131-4645-A8C8-4DDE7CF9655D</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>7FE62D58-D131-4645-A8C8-4DDE7CF9655D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Raiden project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Raiden</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Raiden</string>
+			<key>timeStartedRecording</key>
+			<real>631876133.56324506</real>
+			<key>timeStoppedRecording</key>
+			<real>631876167.64541602</real>
+			<key>title</key>
+			<string>Run Raiden</string>
+			<key>uniqueIdentifier</key>
+			<string>7FE62D58-D131-4645-A8C8-4DDE7CF9655D</string>
 		</dict>
 		<key>825ED782-6DDE-47BD-9CD4-271D3E770AAE</key>
 		<dict>
@@ -1944,6 +2284,40 @@
 			<key>uniqueIdentifier</key>
 			<string>93A539EE-20F8-4573-B78C-D2AEDCDC4B14</string>
 		</dict>
+		<key>9461E10D-FB99-4A0F-9BE4-8BC692DCDD18</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>9461E10D-FB99-4A0F-9BE4-8BC692DCDD18.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Raiden project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Raiden</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Raiden</string>
+			<key>timeStartedRecording</key>
+			<real>631876248.89757705</real>
+			<key>timeStoppedRecording</key>
+			<real>631876406.81428599</real>
+			<key>title</key>
+			<string>Run Raiden</string>
+			<key>uniqueIdentifier</key>
+			<string>9461E10D-FB99-4A0F-9BE4-8BC692DCDD18</string>
+		</dict>
 		<key>9D2DE85E-3F95-44A7-A5CF-7D9EF4D40CED</key>
 		<dict>
 			<key>className</key>
@@ -2080,6 +2454,74 @@
 			<key>uniqueIdentifier</key>
 			<string>B0A0934D-00F8-4F6B-A1C4-A468F21A6B43</string>
 		</dict>
+		<key>B1082A6E-B6E3-43E1-B181-CCD57987E0F8</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B1082A6E-B6E3-43E1-B181-CCD57987E0F8.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Raiden project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Raiden</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Raiden</string>
+			<key>timeStartedRecording</key>
+			<real>631878448.66944396</real>
+			<key>timeStoppedRecording</key>
+			<real>631878458.86231899</real>
+			<key>title</key>
+			<string>Run Raiden</string>
+			<key>uniqueIdentifier</key>
+			<string>B1082A6E-B6E3-43E1-B181-CCD57987E0F8</string>
+		</dict>
+		<key>B11AE2CB-E39C-4B8B-A8E8-4DC4C500A29F</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B11AE2CB-E39C-4B8B-A8E8-4DC4C500A29F.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Raiden project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Raiden</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Raiden</string>
+			<key>timeStartedRecording</key>
+			<real>631877910.40257394</real>
+			<key>timeStoppedRecording</key>
+			<real>631877921.68360198</real>
+			<key>title</key>
+			<string>Run Raiden</string>
+			<key>uniqueIdentifier</key>
+			<string>B11AE2CB-E39C-4B8B-A8E8-4DC4C500A29F</string>
+		</dict>
 		<key>B327AEF1-9700-451A-BC01-929C173FB3A4</key>
 		<dict>
 			<key>className</key>
@@ -2147,6 +2589,40 @@
 			<string>Run Raiden</string>
 			<key>uniqueIdentifier</key>
 			<string>B374F57D-6DB4-4FC6-BD43-F4359C34B636</string>
+		</dict>
+		<key>B59A573B-6102-4D93-B7E5-F191D1CC1DF3</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>B59A573B-6102-4D93-B7E5-F191D1CC1DF3.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Raiden project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Raiden</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Raiden</string>
+			<key>timeStartedRecording</key>
+			<real>631876408.31417406</real>
+			<key>timeStoppedRecording</key>
+			<real>631876422.06676698</real>
+			<key>title</key>
+			<string>Run Raiden</string>
+			<key>uniqueIdentifier</key>
+			<string>B59A573B-6102-4D93-B7E5-F191D1CC1DF3</string>
 		</dict>
 		<key>B61D2E1E-4826-4686-B3CC-76FBFDE13DF6</key>
 		<dict>
@@ -2488,6 +2964,40 @@
 			<key>uniqueIdentifier</key>
 			<string>CA3C9B93-6125-47B7-BC04-7FF80C0FA990</string>
 		</dict>
+		<key>CA5BDA1B-4C56-4748-BF50-DA3EB8473A9D</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>CA5BDA1B-4C56-4748-BF50-DA3EB8473A9D.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Raiden project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Raiden</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Raiden</string>
+			<key>timeStartedRecording</key>
+			<real>631878460.42984796</real>
+			<key>timeStoppedRecording</key>
+			<real>631878470.65823805</real>
+			<key>title</key>
+			<string>Run Raiden</string>
+			<key>uniqueIdentifier</key>
+			<string>CA5BDA1B-4C56-4748-BF50-DA3EB8473A9D</string>
+		</dict>
 		<key>CBAEC00B-D5C1-4280-8DF1-E0941661A904</key>
 		<dict>
 			<key>className</key>
@@ -2521,6 +3031,40 @@
 			<string>Run Raiden</string>
 			<key>uniqueIdentifier</key>
 			<string>CBAEC00B-D5C1-4280-8DF1-E0941661A904</string>
+		</dict>
+		<key>CC1E8CCC-D0F9-4FDD-9464-9F53D815DDBE</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>CC1E8CCC-D0F9-4FDD-9464-9F53D815DDBE.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Raiden project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Raiden</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Raiden</string>
+			<key>timeStartedRecording</key>
+			<real>631877776.20693099</real>
+			<key>timeStoppedRecording</key>
+			<real>631877786.54560804</real>
+			<key>title</key>
+			<string>Run Raiden</string>
+			<key>uniqueIdentifier</key>
+			<string>CC1E8CCC-D0F9-4FDD-9464-9F53D815DDBE</string>
 		</dict>
 		<key>CE363DD6-5E04-41CB-AEE4-A1DB967381EE</key>
 		<dict>
@@ -3066,6 +3610,74 @@
 			<key>uniqueIdentifier</key>
 			<string>EA150711-93B4-4998-9466-F78761E45181</string>
 		</dict>
+		<key>F0E37995-AEBB-4258-8BC3-04F0073921D1</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>F0E37995-AEBB-4258-8BC3-04F0073921D1.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Raiden project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Raiden</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Raiden</string>
+			<key>timeStartedRecording</key>
+			<real>631875493.56360805</real>
+			<key>timeStoppedRecording</key>
+			<real>631875512.21807599</real>
+			<key>title</key>
+			<string>Run Raiden</string>
+			<key>uniqueIdentifier</key>
+			<string>F0E37995-AEBB-4258-8BC3-04F0073921D1</string>
+		</dict>
+		<key>F1DCCE28-3D72-4FCA-BEDA-260E9F4C7EB7</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>F1DCCE28-3D72-4FCA-BEDA-260E9F4C7EB7.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Raiden project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Raiden</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Raiden</string>
+			<key>timeStartedRecording</key>
+			<real>631876169.07954395</real>
+			<key>timeStoppedRecording</key>
+			<real>631876229.09569299</real>
+			<key>title</key>
+			<string>Run Raiden</string>
+			<key>uniqueIdentifier</key>
+			<string>F1DCCE28-3D72-4FCA-BEDA-260E9F4C7EB7</string>
+		</dict>
 		<key>F49C9EF5-4B9E-40E8-BBEA-A3A68EAD473B</key>
 		<dict>
 			<key>className</key>
@@ -3201,6 +3813,40 @@
 			<string>Run Raiden</string>
 			<key>uniqueIdentifier</key>
 			<string>F6E235D4-D68A-40F8-9F70-EF0AF2D370BF</string>
+		</dict>
+		<key>F9660137-1D71-43CC-904C-45D178C505B5</key>
+		<dict>
+			<key>className</key>
+			<string>DBGConsoleLog</string>
+			<key>documentTypeString</key>
+			<string>com.apple.dt.IDE.DebuggerLogContentType</string>
+			<key>domainType</key>
+			<string>Xcode.IDEActivityLogDomainType.DebugLog</string>
+			<key>fileName</key>
+			<string>F9660137-1D71-43CC-904C-45D178C505B5.xcactivitylog</string>
+			<key>hasPrimaryLog</key>
+			<true/>
+			<key>primaryObservable</key>
+			<dict>
+				<key>highLevelStatus</key>
+				<string>S</string>
+			</dict>
+			<key>schemeIdentifier-containerName</key>
+			<string>Raiden project</string>
+			<key>schemeIdentifier-schemeName</key>
+			<string>Raiden</string>
+			<key>schemeIdentifier-sharedScheme</key>
+			<integer>1</integer>
+			<key>signature</key>
+			<string>Run Raiden</string>
+			<key>timeStartedRecording</key>
+			<real>631876231.48146403</real>
+			<key>timeStoppedRecording</key>
+			<real>631876249.10745096</real>
+			<key>title</key>
+			<string>Run Raiden</string>
+			<key>uniqueIdentifier</key>
+			<string>F9660137-1D71-43CC-904C-45D178C505B5</string>
 		</dict>
 		<key>FA3C9202-DBE4-4DFE-AC85-246A3D25A6DC</key>
 		<dict>

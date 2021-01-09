@@ -6,7 +6,7 @@
 	<integer>10</integer>
 	<key>logs</key>
 	<dict>
-		<key>532A4761-5BCA-4D5A-98BE-FA5C22132611</key>
+		<key>3A59E7D3-B483-419A-97F7-95F00BA24BAA</key>
 		<dict>
 			<key>className</key>
 			<string>IDEActivityLogMajorGroupSection</string>
@@ -15,7 +15,7 @@
 			<key>domainType</key>
 			<string>Xcode.IDEActivityLogDomainType.target.product-type.tool</string>
 			<key>fileName</key>
-			<string>532A4761-5BCA-4D5A-98BE-FA5C22132611.xcactivitylog</string>
+			<string>3A59E7D3-B483-419A-97F7-95F00BA24BAA.xcactivitylog</string>
 			<key>hasPrimaryLog</key>
 			<true/>
 			<key>primaryObservable</key>
@@ -26,13 +26,13 @@
 			<key>signature</key>
 			<string>Raiden-cdwnyywjyduznchgvodlwyqyrwfq</string>
 			<key>timeStartedRecording</key>
-			<real>631868373.80879796</real>
+			<real>631878458.72195995</real>
 			<key>timeStoppedRecording</key>
-			<real>631868373.80904198</real>
+			<real>631878460.41808605</real>
 			<key>title</key>
 			<string>Build target Raiden</string>
 			<key>uniqueIdentifier</key>
-			<string>532A4761-5BCA-4D5A-98BE-FA5C22132611</string>
+			<string>3A59E7D3-B483-419A-97F7-95F00BA24BAA</string>
 		</dict>
 	</dict>
 	<key>preserveOldLogs</key>

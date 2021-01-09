@@ -16,16 +16,24 @@ Game::~Game() { window.create(VideoMode(WIDTH, HEIGHT), "RAIDEN"); }
 
 void Game::tick() { ; }
 
+void Game::render()
+{
+    window.clear();
+    window.draw(vesta);
+    window.draw(plane);
+    window.display();
+}
+
 void Game::run() {
-  Texture t_vesta, t_plane;
-  // t_vesta.loadFromFile("../Resources/images/Vesta.jpg");
-  //  t_plane.loadFromFile("../Resources/images/plane.png");
-  t_vesta.loadFromFile("Raiden/Resources/images/Vesta.jpg");
-  t_plane.loadFromFile("Raiden/Resources/images/plane.png");
+    
+  t_vesta.loadFromFile("../Resources/images/Vesta.jpg");
+  t_plane.loadFromFile("../Resources/images/plane.png");
+  //t_vesta.loadFromFile("Raiden/Resources/images/Vesta.jpg");
+  //t_plane.loadFromFile("Raiden/Resources/images/plane.png");
   RenderWindow window(VideoMode(WIDTH, HEIGHT), "RAIDEN");
 
-  Sprite vesta(t_vesta);
-  Sprite plane(t_plane);
+  vesta.setTexture(t_vesta);
+  plane.setTexture(t_plane);
 
   Vector2u planeSize;
   plane.setScale(0.4, 0.4);
@@ -37,7 +45,8 @@ void Game::run() {
   double dt;
   float speed = 500;
 
-  while (window.isOpen()) {
+  while (window.isOpen())
+  {
     float dt = clock.restart().asSeconds();
     clock.restart();
     timer += dt;
@@ -80,11 +89,11 @@ void Game::run() {
       timer = 0;
       tick();
     }
-
-    window.clear();
-
-    window.draw(vesta);
-    window.draw(plane);
-    window.display();
+//      window.clear();
+//      window.draw(vesta);
+//      window.draw(plane);
+//      window.display();
+      render();
+    
   }
 }
