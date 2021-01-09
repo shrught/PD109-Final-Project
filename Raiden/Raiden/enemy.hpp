@@ -11,34 +11,17 @@ class Enemy {
   Sprite pdogs;
 
  private:
+  float x_;
+  float y_;
+  float speed;
   Texture graphic;
   void update();
 
   // float distance;
-  float speed;
 
   // void update(float dt);
-
-  void render(sf::RenderTarget& target);
+  // void render(sf::RenderTarget& target);
 };
-
-Enemy::Enemy(float x_, float y_, float speed, RenderWindow& window) {
-  graphic.loadFromFile("Raiden/Resources/images/pdogs.png");
-
-  pdogs.setPosition(Vector2f(x_, y_));
-  window.draw(pdogs);
-
-  for (int i = 0; i < 100; i++) {
-    update();
-  }
-}
-
-void Enemy::update() {
-  Clock clock;
-  double dt;
-  dt = clock.restart().asSeconds();
-  pdogs.move(0, speed * dt);
-}
 
 // const int MAX_ENTITES = 100;
 

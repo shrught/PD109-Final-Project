@@ -49,7 +49,7 @@ void Game::run() {
         window.close();
     }
 
-    Enemy dog(400, 400, 1, window);
+   // Enemy dog(400, 400, 1, window);
 
     if (Keyboard::isKeyPressed(Keyboard::W)) {
       plane.move(0.f, -speed * dt);
