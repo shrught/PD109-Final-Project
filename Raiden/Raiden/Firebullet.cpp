@@ -9,7 +9,7 @@ FBullet::FBullet(sf::Vector2f size){
 }
 
 void FBullet::fire(int speed){
-    bullet.move(0,speed);
+    bullet.move(0,-speed);
 }
 
 int FBullet::getRight(){
