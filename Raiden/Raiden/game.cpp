@@ -26,8 +26,8 @@ void Game::tick()
 void Game::run()
 {
     Texture t_vesta, t_plane;
-    t_vesta.loadFromFile("../Resources/images/Vesta.jpg");
-    t_plane.loadFromFile("../Resources/images/plane.png");
+    t_vesta.loadFromFile("Raiden/Resources/images/Vesta.jpg");
+    t_plane.loadFromFile("Raiden/Resources/images/plane.png");
     RenderWindow window(VideoMode(WIDTH, HEIGHT), "RAIDEN");
     
     Sprite vesta(t_vesta);
