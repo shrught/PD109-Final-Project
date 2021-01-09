@@ -1,0 +1,272 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F35AF3A25A889D400E333A0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F35AF3925A889D400E333A0 /* main.cpp */; };
+		8F35AF4A25A88B4900E333A0 /* menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F35AF4825A88B4900E333A0 /* menu.cpp */; };
+		8F35AF4F25A88CB600E333A0 /* info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F35AF4D25A88CB600E333A0 /* info.cpp */; };
+		8F35AF5625A8959500E333A0 /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F35AF5425A8959500E333A0 /* game.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8F35AF3625A889D400E333A0 /* Raiden */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Raiden; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F35AF3925A889D400E333A0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8F35AF4625A88A0C00E333A0 /* config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = config.h; sourceTree = "<group>"; };
+		8F35AF4825A88B4900E333A0 /* menu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = menu.cpp; sourceTree = "<group>"; };
+		8F35AF4925A88B4900E333A0 /* menu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = menu.hpp; sourceTree = "<group>"; };
+		8F35AF4D25A88CB600E333A0 /* info.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = info.cpp; sourceTree = "<group>"; };
+		8F35AF4E25A88CB600E333A0 /* info.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = info.hpp; sourceTree = "<group>"; };
+		8F35AF5425A8959500E333A0 /* game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
+		8F35AF5525A8959500E333A0 /* game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = game.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F35AF3425A889D400E333A0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F35AF2E25A889D400E333A0 = {
+			isa = PBXGroup;
+			children = (
+				8F35AF3825A889D400E333A0 /* Raiden */,
+				8F35AF3725A889D400E333A0 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8F35AF3725A889D400E333A0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F35AF3625A889D400E333A0 /* Raiden */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F35AF3825A889D400E333A0 /* Raiden */ = {
+			isa = PBXGroup;
+			children = (
+				8F35AF3925A889D400E333A0 /* main.cpp */,
+				8F35AF4625A88A0C00E333A0 /* config.h */,
+				8F35AF4825A88B4900E333A0 /* menu.cpp */,
+				8F35AF5425A8959500E333A0 /* game.cpp */,
+				8F35AF5525A8959500E333A0 /* game.hpp */,
+				8F35AF4D25A88CB600E333A0 /* info.cpp */,
+				8F35AF4E25A88CB600E333A0 /* info.hpp */,
+				8F35AF4925A88B4900E333A0 /* menu.hpp */,
+				8F35AF3B25A889D400E333A0 /* Resources */,
+			);
+			path = Raiden;
+			sourceTree = "<group>";
+		};
+		8F35AF3B25A889D400E333A0 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F35AF3525A889D400E333A0 /* Raiden */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F35AF4225A889D400E333A0 /* Build configuration list for PBXNativeTarget "Raiden" */;
+			buildPhases = (
+				8F35AF3325A889D400E333A0 /* Sources */,
+				8F35AF3425A889D400E333A0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Raiden;
+			productName = Raiden;
+			productReference = 8F35AF3625A889D400E333A0 /* Raiden */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F35AF2F25A889D400E333A0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1200;
+				ORGANIZATIONNAME = "!!!";
+				TargetAttributes = {
+					8F35AF3525A889D400E333A0 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = 8F35AF3225A889D400E333A0 /* Build configuration list for PBXProject "Raiden" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F35AF2E25A889D400E333A0;
+			productRefGroup = 8F35AF3725A889D400E333A0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F35AF3525A889D400E333A0 /* Raiden */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F35AF3325A889D400E333A0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F35AF4A25A88B4900E333A0 /* menu.cpp in Sources */,
+				8F35AF3A25A889D400E333A0 /* main.cpp in Sources */,
+				8F35AF4F25A88CB600E333A0 /* info.cpp in Sources */,
+				8F35AF5625A8959500E333A0 /* game.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8F35AF4025A889D400E333A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks/,
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				SFML_AUDIO = "$(SFML_LINK_PREFIX) sfml-audio$(SFML_LINK_SUFFIX)";
+				SFML_BINARY_TYPE = FRAMEWORKS;
+				SFML_GRAPHICS = "$(SFML_LINK_PREFIX) sfml-graphics$(SFML_LINK_SUFFIX)";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_SUFFIX)";
+				SFML_NETWORK = "$(SFML_LINK_PREFIX) sfml-network$(SFML_LINK_SUFFIX)";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX) sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "$(SFML_LINK_PREFIX) sfml-window$(SFML_LINK_SUFFIX)";
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Debug;
+		};
+		8F35AF4125A889D400E333A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks/,
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				SFML_AUDIO = "$(SFML_LINK_PREFIX) sfml-audio$(SFML_LINK_SUFFIX)";
+				SFML_BINARY_TYPE = FRAMEWORKS;
+				SFML_GRAPHICS = "$(SFML_LINK_PREFIX) sfml-graphics$(SFML_LINK_SUFFIX)";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_SUFFIX)";
+				SFML_NETWORK = "$(SFML_LINK_PREFIX) sfml-network$(SFML_LINK_SUFFIX)";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX) sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "$(SFML_LINK_PREFIX) sfml-window$(SFML_LINK_SUFFIX)";
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Release;
+		};
+		8F35AF4325A889D400E333A0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8F35AF4425A889D400E333A0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F35AF3225A889D400E333A0 /* Build configuration list for PBXProject "Raiden" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F35AF4025A889D400E333A0 /* Debug */,
+				8F35AF4125A889D400E333A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F35AF4225A889D400E333A0 /* Build configuration list for PBXNativeTarget "Raiden" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F35AF4325A889D400E333A0 /* Debug */,
+				8F35AF4425A889D400E333A0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8F35AF2F25A889D400E333A0 /* Project object */;
+}

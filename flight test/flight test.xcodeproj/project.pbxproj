@@ -1,0 +1,292 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8F688B9825A4C34C00B71EA1 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F688B9725A4C34C00B71EA1 /* main.cpp */; };
+		8F688BA625A4C3F800B71EA1 /* menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F688BA425A4C3F800B71EA1 /* menu.cpp */; };
+		8F688BAA25A4C47600B71EA1 /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F688BA825A4C47600B71EA1 /* game.cpp */; };
+		8F688BAE25A4C4AD00B71EA1 /* info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F688BAC25A4C4AD00B71EA1 /* info.cpp */; };
+		8F688BB225A4C4DF00B71EA1 /* props.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F688BB025A4C4DF00B71EA1 /* props.cpp */; };
+		8F688BB625A4C52200B71EA1 /* snake.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F688BB425A4C52200B71EA1 /* snake.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8F688B9425A4C34C00B71EA1 /* flight test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "flight test"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F688B9725A4C34C00B71EA1 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		8F688B9A25A4C34C00B71EA1 /* cute_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = cute_image.jpg; path = ../cute_image.jpg; sourceTree = "<group>"; };
+		8F688B9B25A4C34C00B71EA1 /* nice_music.ogg */ = {isa = PBXFileReference; lastKnownFileType = file; name = nice_music.ogg; path = ../nice_music.ogg; sourceTree = "<group>"; };
+		8F688B9C25A4C34C00B71EA1 /* sansation.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = sansation.ttf; path = ../sansation.ttf; sourceTree = "<group>"; };
+		8F688B9D25A4C34C00B71EA1 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon.png; path = ../icon.png; sourceTree = "<group>"; };
+		8F688BA425A4C3F800B71EA1 /* menu.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = menu.cpp; sourceTree = "<group>"; };
+		8F688BA525A4C3F800B71EA1 /* menu.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = menu.hpp; sourceTree = "<group>"; };
+		8F688BA825A4C47600B71EA1 /* game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
+		8F688BA925A4C47600B71EA1 /* game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = game.hpp; sourceTree = "<group>"; };
+		8F688BAC25A4C4AD00B71EA1 /* info.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = info.cpp; sourceTree = "<group>"; };
+		8F688BAD25A4C4AD00B71EA1 /* info.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = info.hpp; sourceTree = "<group>"; };
+		8F688BB025A4C4DF00B71EA1 /* props.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = props.cpp; sourceTree = "<group>"; };
+		8F688BB125A4C4DF00B71EA1 /* props.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = props.hpp; sourceTree = "<group>"; };
+		8F688BB425A4C52200B71EA1 /* snake.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = snake.cpp; sourceTree = "<group>"; };
+		8F688BB525A4C52200B71EA1 /* snake.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = snake.hpp; sourceTree = "<group>"; };
+		8F688BBA25A4C7C400B71EA1 /* Config.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8F688B9225A4C34C00B71EA1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8F688B8C25A4C34C00B71EA1 = {
+			isa = PBXGroup;
+			children = (
+				8F688B9625A4C34C00B71EA1 /* flight test */,
+				8F688B9525A4C34C00B71EA1 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8F688B9525A4C34C00B71EA1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8F688B9425A4C34C00B71EA1 /* flight test */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8F688B9625A4C34C00B71EA1 /* flight test */ = {
+			isa = PBXGroup;
+			children = (
+				8F688B9725A4C34C00B71EA1 /* main.cpp */,
+				8F688BA825A4C47600B71EA1 /* game.cpp */,
+				8F688BA925A4C47600B71EA1 /* game.hpp */,
+				8F688BAC25A4C4AD00B71EA1 /* info.cpp */,
+				8F688BAD25A4C4AD00B71EA1 /* info.hpp */,
+				8F688BB025A4C4DF00B71EA1 /* props.cpp */,
+				8F688BB125A4C4DF00B71EA1 /* props.hpp */,
+				8F688BB425A4C52200B71EA1 /* snake.cpp */,
+				8F688BB525A4C52200B71EA1 /* snake.hpp */,
+				8F688BA425A4C3F800B71EA1 /* menu.cpp */,
+				8F688BA525A4C3F800B71EA1 /* menu.hpp */,
+				8F688BBA25A4C7C400B71EA1 /* Config.h */,
+				8F688B9925A4C34C00B71EA1 /* Resources */,
+			);
+			path = "flight test";
+			sourceTree = "<group>";
+		};
+		8F688B9925A4C34C00B71EA1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8F688B9A25A4C34C00B71EA1 /* cute_image.jpg */,
+				8F688B9B25A4C34C00B71EA1 /* nice_music.ogg */,
+				8F688B9C25A4C34C00B71EA1 /* sansation.ttf */,
+				8F688B9D25A4C34C00B71EA1 /* icon.png */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8F688B9325A4C34C00B71EA1 /* flight test */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8F688BA025A4C34C00B71EA1 /* Build configuration list for PBXNativeTarget "flight test" */;
+			buildPhases = (
+				8F688B9125A4C34C00B71EA1 /* Sources */,
+				8F688B9225A4C34C00B71EA1 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "flight test";
+			productName = "flight test";
+			productReference = 8F688B9425A4C34C00B71EA1 /* flight test */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8F688B8D25A4C34C00B71EA1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1200;
+				ORGANIZATIONNAME = "!!!";
+				TargetAttributes = {
+					8F688B9325A4C34C00B71EA1 = {
+						CreatedOnToolsVersion = 12.0;
+					};
+				};
+			};
+			buildConfigurationList = 8F688B9025A4C34C00B71EA1 /* Build configuration list for PBXProject "flight test" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8F688B8C25A4C34C00B71EA1;
+			productRefGroup = 8F688B9525A4C34C00B71EA1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8F688B9325A4C34C00B71EA1 /* flight test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8F688B9125A4C34C00B71EA1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8F688BA625A4C3F800B71EA1 /* menu.cpp in Sources */,
+				8F688BAE25A4C4AD00B71EA1 /* info.cpp in Sources */,
+				8F688BB225A4C4DF00B71EA1 /* props.cpp in Sources */,
+				8F688B9825A4C34C00B71EA1 /* main.cpp in Sources */,
+				8F688BB625A4C52200B71EA1 /* snake.cpp in Sources */,
+				8F688BAA25A4C47600B71EA1 /* game.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		8F688B9E25A4C34C00B71EA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks/,
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				SFML_AUDIO = "$(SFML_LINK_PREFIX) sfml-audio$(SFML_LINK_SUFFIX)";
+				SFML_BINARY_TYPE = FRAMEWORKS;
+				SFML_GRAPHICS = "$(SFML_LINK_PREFIX) sfml-graphics$(SFML_LINK_SUFFIX)";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_SUFFIX)";
+				SFML_NETWORK = "$(SFML_LINK_PREFIX) sfml-network$(SFML_LINK_SUFFIX)";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX) sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "$(SFML_LINK_PREFIX) sfml-window$(SFML_LINK_SUFFIX)";
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Debug;
+		};
+		8F688B9F25A4C34C00B71EA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++11";
+				CLANG_CXX_LIBRARY = "libc++";
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks/,
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(inherited)",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				SFML_AUDIO = "$(SFML_LINK_PREFIX) sfml-audio$(SFML_LINK_SUFFIX)";
+				SFML_BINARY_TYPE = FRAMEWORKS;
+				SFML_GRAPHICS = "$(SFML_LINK_PREFIX) sfml-graphics$(SFML_LINK_SUFFIX)";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_SUFFIX)";
+				SFML_NETWORK = "$(SFML_LINK_PREFIX) sfml-network$(SFML_LINK_SUFFIX)";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX) sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "$(SFML_LINK_PREFIX) sfml-window$(SFML_LINK_SUFFIX)";
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Release;
+		};
+		8F688BA125A4C34C00B71EA1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8F688BA225A4C34C00B71EA1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8F688B9025A4C34C00B71EA1 /* Build configuration list for PBXProject "flight test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F688B9E25A4C34C00B71EA1 /* Debug */,
+				8F688B9F25A4C34C00B71EA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8F688BA025A4C34C00B71EA1 /* Build configuration list for PBXNativeTarget "flight test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8F688BA125A4C34C00B71EA1 /* Debug */,
+				8F688BA225A4C34C00B71EA1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8F688B8D25A4C34C00B71EA1 /* Project object */;
+}
