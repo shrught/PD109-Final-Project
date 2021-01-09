@@ -55,22 +55,34 @@ void Game::run()
         {
             std::cout << "W";
             plane.move(0.f, -speed * dt);
+            if (plane.getPosition().y <= 0) //Left
+                plane.setPosition(plane.getPosition().x, 0.f);
         }
         if(Keyboard::isKeyPressed(Keyboard::S))
         {
             std::cout << "S";
             plane.move(0.f, speed * dt);
+            if (plane.getPosition().y >= window.getSize().y - plane.getGlobalBounds().height) //Bottom
+                plane.setPosition(plane.getPosition().x, window.getSize().y - plane.getGlobalBounds().height);
+            
+
+            
         }
         if(Keyboard::isKeyPressed(Keyboard::A))
         {
             std::cout << "A";
             plane.move(-speed * dt * 1.2, 0.f);
+            if (plane.getPosition().x <= 0) //Left
+                plane.setPosition(0.f, plane.getPosition().y);
         }
         if(Keyboard::isKeyPressed(Keyboard::D))
         {
             std::cout << "D";
             plane.move(speed * dt * 1.2, 0.f);
+            if (plane.getPosition().x >= window.getSize().x - plane.getGlobalBounds().width) //Right
+                plane.setPosition(window.getSize().x - plane.getGlobalBounds().width, plane.getPosition().y);
         }
+        
         
         window.clear();
         

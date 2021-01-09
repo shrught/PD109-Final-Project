@@ -17,15 +17,15 @@ Info::Info(float width, float height)
     //     // handle error
     // }
 
-    if (!pages_texture[0].loadFromFile("/Users/wangyanpu/Desktop/台灣大學/大二上/程設設計/期末報告/A-Cnake/resources/images/instra1.png"))
+    if (!pages_texture[0].loadFromFile("../Resources/images/instra1.png"))
     {
         // handle error
     }
-    if (!pages_texture[1].loadFromFile("/Users/wangyanpu/Desktop/台灣大學/大二上/程設設計/期末報告/A-Cnake/resources/images/instra2.png"))
+    if (!pages_texture[1].loadFromFile("../Resources/images/instra2.png"))
     {
         // handle error
     }
-    if (!pages_texture[2].loadFromFile("/Users/wangyanpu/Desktop/台灣大學/大二上/程設設計/期末報告/A-Cnake/resources/images/instra3.png"))
+    if (!pages_texture[2].loadFromFile("../Resources/images/instra3.png"))
     {
         // handle error
     }
@@ -51,13 +51,13 @@ void Info::info_state()
     
     
     SoundBuffer buffer;
-    if (!buffer.loadFromFile("/Users/wangyanpu/Desktop/台灣大學/大二上/程設設計/期末報告/A-Cnake/resources/audio/pop.wav"))
+    if (!buffer.loadFromFile("../Resources/audio/pop.wav"))
         return;
     Sound pop;
     pop.setVolume(50);
     pop.setBuffer(buffer);
     SoundBuffer bLeave;
-    if (!bLeave.loadFromFile("/Users/wangyanpu/Desktop/台灣大學/大二上/程設設計/期末報告/A-Cnake/resources/audio/option.wav"))
+    if (!bLeave.loadFromFile("../Resources/audio/option.wav"))
         return;
     Sound leave;
     leave.setVolume(50);

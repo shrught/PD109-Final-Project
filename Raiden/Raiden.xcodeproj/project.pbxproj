@@ -11,6 +11,7 @@
 		8F35AF4A25A88B4900E333A0 /* menu.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F35AF4825A88B4900E333A0 /* menu.cpp */; };
 		8F35AF4F25A88CB600E333A0 /* info.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F35AF4D25A88CB600E333A0 /* info.cpp */; };
 		8F35AF5625A8959500E333A0 /* game.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F35AF5425A8959500E333A0 /* game.cpp */; };
+		8F35AF5B25A95A3000E333A0 /* fighter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F35AF5925A95A3000E333A0 /* fighter.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,8 @@
 		8F35AF4E25A88CB600E333A0 /* info.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = info.hpp; sourceTree = "<group>"; };
 		8F35AF5425A8959500E333A0 /* game.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = game.cpp; sourceTree = "<group>"; };
 		8F35AF5525A8959500E333A0 /* game.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = game.hpp; sourceTree = "<group>"; };
+		8F35AF5925A95A3000E333A0 /* fighter.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = fighter.cpp; sourceTree = "<group>"; };
+		8F35AF5A25A95A3000E333A0 /* fighter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = fighter.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,14 +58,16 @@
 		8F35AF3825A889D400E333A0 /* Raiden */ = {
 			isa = PBXGroup;
 			children = (
-				8F35AF3925A889D400E333A0 /* main.cpp */,
 				8F35AF4625A88A0C00E333A0 /* config.h */,
-				8F35AF4825A88B4900E333A0 /* menu.cpp */,
-				8F35AF5425A8959500E333A0 /* game.cpp */,
-				8F35AF5525A8959500E333A0 /* game.hpp */,
-				8F35AF4D25A88CB600E333A0 /* info.cpp */,
-				8F35AF4E25A88CB600E333A0 /* info.hpp */,
+				8F35AF3925A889D400E333A0 /* main.cpp */,
 				8F35AF4925A88B4900E333A0 /* menu.hpp */,
+				8F35AF4825A88B4900E333A0 /* menu.cpp */,
+				8F35AF5525A8959500E333A0 /* game.hpp */,
+				8F35AF5425A8959500E333A0 /* game.cpp */,
+				8F35AF4E25A88CB600E333A0 /* info.hpp */,
+				8F35AF4D25A88CB600E333A0 /* info.cpp */,
+				8F35AF5A25A95A3000E333A0 /* fighter.hpp */,
+				8F35AF5925A95A3000E333A0 /* fighter.cpp */,
 				8F35AF3B25A889D400E333A0 /* Resources */,
 			);
 			path = Raiden;
@@ -134,6 +139,7 @@
 				8F35AF4A25A88B4900E333A0 /* menu.cpp in Sources */,
 				8F35AF3A25A889D400E333A0 /* main.cpp in Sources */,
 				8F35AF4F25A88CB600E333A0 /* info.cpp in Sources */,
+				8F35AF5B25A95A3000E333A0 /* fighter.cpp in Sources */,
 				8F35AF5625A8959500E333A0 /* game.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
