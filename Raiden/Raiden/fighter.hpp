@@ -11,7 +11,10 @@
 
 class Fighter
 {
+    friend class Game;
 public:
     int health = 100;
     int life = 3;
+    int bulletType = 1;
+    bool alive = 1;
 };

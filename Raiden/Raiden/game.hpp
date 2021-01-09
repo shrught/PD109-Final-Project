@@ -9,27 +9,41 @@
 #pragma once
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
-#include "config.h"
+
 #include <ctime>
 #include <iostream>
+#include<unistd.h>
+#include <vector>
+
+#include "config.h"
+#include "fighter.hpp"
+#include "enemy.hpp"
+#include "Firebullet.hpp"
 using namespace sf;
 
 
 class Game
 {
+    friend class FBullet;
+    friend class Enemy;
+    
 private:
-    Sprite vesta;
-    Sprite plane;
     Texture t_vesta;
     Texture t_plane;
+    Texture t_plane2;
+    
+    Sprite vesta;
+    Sprite plane;
+    Sprite plane2;
+
+    RenderWindow window;
+    
+    Fighter player1;
+    Fighter player2;
+    int playerNum = 1;
 public:
     Game(); // init
     ~Game();
-    
-    RenderWindow window;
-
     void run();
-    void tick();
-    void render();
 };
 
