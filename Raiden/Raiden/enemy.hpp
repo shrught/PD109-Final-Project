@@ -10,6 +10,8 @@ class Enemy {
   Enemy(float x_, float y_, float speed, RenderWindow&);
   Sprite pdogs;
 
+  void run();
+
  private:
   float x_;
   float y_;
@@ -17,10 +19,6 @@ class Enemy {
   Texture graphic;
   void update();
 
-  // float distance;
-
-  // void update(float dt);
-  // void render(sf::RenderTarget& target);
 };
 
 // const int MAX_ENTITES = 100;

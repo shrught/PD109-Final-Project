@@ -17,9 +17,7 @@ void Enemy::update() {
 }
 //寫一個random生成？
 
-int main() {
+void Enemy::run() {
   Enemy dog(400, 300, 1, &window);
-  for (int i = 0; i < 10; i++) {
-    dog.update();
-  }
+  dog.update();
 }

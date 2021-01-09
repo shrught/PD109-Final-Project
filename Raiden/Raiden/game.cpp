@@ -7,10 +7,13 @@
 //
 
 #include "game.hpp"
-#include<unistd.h>
-#include "enemy.hpp"
-#include "Firebullet.hpp"
+
+#include <unistd.h>
+
 #include <vector>
+
+#include "Firebullet.hpp"
+#include "enemy.hpp"
 
 Game::Game() { ; }
 
@@ -42,9 +45,6 @@ void Game::run() {
   std::vector<FBullet> bulletvec;
   bool isFiring = false;
 
-  
-
-
   while (window.isOpen()) {
     float dt = clock.restart().asSeconds();
     clock.restart();
@@ -57,7 +57,18 @@ void Game::run() {
         window.close();
     }
 
-   // Enemy dog(400, 400, 1, window);
+    // random enemy
+    Enemy dog(400,400,1,window);
+    time_t first = time(NULL) + 10;
+
+    int seconds = 0;
+    while (true) {
+      if (time(NULL) >= first) {
+        first = time(NULL) + 10;  // Saves the time additional 10 seconds ahead from now!
+        dog.run();
+        seconds = 0;  // Resets the secondcounter.
+      }
+    }
 
     if (Keyboard::isKeyPressed(Keyboard::W)) {
       plane.move(0.f, -speed * dt);
@@ -84,8 +95,8 @@ void Game::run() {
                           plane.getPosition().y);
     }
 
-    if(Keyboard::isKeyPressed(Keyboard::Space)){
-            isFiring = true;
+    if (Keyboard::isKeyPressed(Keyboard::Space)) {
+      isFiring = true;
     }
 
     if (timer > delay) {
@@ -95,23 +106,22 @@ void Game::run() {
 
     window.clear();
 
-  
-
     window.draw(vesta);
     window.draw(plane);
 
-    if(isFiring == true){
-        FBullet newBullet(sf::Vector2f(10,20));
-        newBullet.setPos(sf::Vector2f((plane.getPosition().x+(plane.getGlobalBounds().width)/2),plane.getPosition().y));
-        bulletvec.push_back(newBullet);
-        isFiring = false;
-        }
+    if (isFiring == true) {
+      FBullet newBullet(sf::Vector2f(10, 20));
+      newBullet.setPos(sf::Vector2f(
+          (plane.getPosition().x + (plane.getGlobalBounds().width) / 2),
+          plane.getPosition().y));
+      bulletvec.push_back(newBullet);
+      isFiring = false;
+    }
 
-        for(int i = 0; i < bulletvec.size();i++){
-            bulletvec[i].draw(window);
-            bulletvec[i].fire(3);
-
-        }
+    for (int i = 0; i < bulletvec.size(); i++) {
+      bulletvec[i].draw(window);
+      bulletvec[i].fire(3);
+    }
     window.display();
   }
 }
