@@ -62,7 +62,7 @@ void Info::info_state()
     Sound leave;
     leave.setVolume(50);
     leave.setBuffer(bLeave);
-    RenderWindow window(VideoMode(WIDTH, HEIGHT), "A CNAKE");
+    RenderWindow window(VideoMode(WIDTH, HEIGHT), "RAIDEN");
     // int pageIndex = 1;
     while(window.isOpen())
     {

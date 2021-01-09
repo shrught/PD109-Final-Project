@@ -6,4 +6,12 @@
 //  Copyright © 2021 !!!. All rights reserved.
 //
 
+#pragma once
+#include "config.h"
 
+class Fighter
+{
+public:
+    int health = 100;
+    int life = 3;
+};

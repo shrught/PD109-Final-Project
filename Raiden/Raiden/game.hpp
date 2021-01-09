@@ -6,6 +6,7 @@
 //  Copyright © 2021 !!!. All rights reserved.
 //
 
+#pragma once
 #include <SFML/Graphics.hpp>
 #include <SFML/Audio.hpp>
 #include "config.h"
@@ -22,5 +23,6 @@ public:
     ~Game();
 
     void run();
+    void tick();
 };
 

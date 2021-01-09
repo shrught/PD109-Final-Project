@@ -24,7 +24,7 @@ int main()
     Game game;
 
     Music music;
-    if (!music.openFromFile("../Resources/audio/opening-funky.ogg"))
+    if (!music.openFromFile("../Resources/audio/raiden.wav"))
         return -1; // error
     music.setVolume(20);
     music.setLoop(true);
@@ -84,7 +84,7 @@ int main()
                         {
                         case 0:
                             std::cout << "Play button has been pressed" << std::endl;
-                            music.setVolume(10);
+                            music.setVolume(30);
                             window.setVisible(false);
                             enter.play();
                             while (timer < limit + 0.1)
@@ -94,7 +94,7 @@ int main()
                                 timer += time;
                             }
                             game.run();
-                            music.setVolume(20);
+                            music.setVolume(40);
                             window.setVisible(true);
                             break;
                         case 1:

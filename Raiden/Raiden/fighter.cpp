@@ -6,4 +6,5 @@
 //  Copyright © 2021 !!!. All rights reserved.
 //
 
+#pragma once
 #include "fighter.hpp"
