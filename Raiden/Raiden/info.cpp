@@ -17,15 +17,18 @@ Info::Info(float width, float height)
     //     // handle error
     // }
 
-    if (!pages_texture[0].loadFromFile("Raiden/Resources/images/instra1.png"))
+    if (!pages_texture[0].loadFromFile("../Resources/images/instra1.png"))
+    //if (!pages_texture[0].loadFromFile("Raiden/Resources/images/instra1.png"))
     {
         // handle error
     }
-    if (!pages_texture[1].loadFromFile("Raiden/Resources/images/instra2.png"))
+    if (!pages_texture[1].loadFromFile("../Resources/images/instra2.png"))
+    //if (!pages_texture[1].loadFromFile("Raiden/Resources/images/instra2.png"))
     {
         // handle error
     }
-    if (!pages_texture[2].loadFromFile("Raiden/Resources/images/instra3.png"))
+    if (!pages_texture[2].loadFromFile("../Resources/images/instra3.png"))
+    //if (!pages_texture[2].loadFromFile("Raiden/Resources/images/instra3.png"))
     {
         // handle error
     }
@@ -51,13 +54,15 @@ void Info::info_state()
     
     
     SoundBuffer buffer;
-    if (!buffer.loadFromFile("Raiden/Resources/audio/pop.wav"))
+    if (!buffer.loadFromFile("../Resources/audio/pop.wav"))
+    //if (!buffer.loadFromFile("Raiden/Resources/audio/pop.wav"))
         return;
     Sound pop;
     pop.setVolume(50);
     pop.setBuffer(buffer);
     SoundBuffer bLeave;
-    if (!bLeave.loadFromFile("Raiden/Resources/audio/option.wav"))
+    if (!bLeave.loadFromFile("../Resources/audio/option.wav"))
+    //if (!bLeave.loadFromFile("Raiden/Resources/audio/option.wav"))
         return;
     Sound leave;
     leave.setVolume(50);

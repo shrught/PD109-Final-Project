@@ -11,13 +11,14 @@
 
 Menu::Menu(float width, float height)
 {
-    if (!font.loadFromFile("Raiden/Resources/fonts/prstartk.ttf"))
+    if (!font.loadFromFile("../Resources/fonts/prstartk.ttf"))
+    //if (!font.loadFromFile("Raiden/Resources/fonts/prstartk.ttf"))
     {
         // handle error
     }
     
-    //if (!bg_texture.loadFromFile("../Resources/images/menu.jpg"))
-    if (!bg_texture.loadFromFile("Raiden/Resources/images/Vesta.jpg"))
+    if (!bg_texture.loadFromFile("../Resources/images/menu.jpg"))
+    //if (!bg_texture.loadFromFile("Raiden/Resources/images/Vesta.jpg"))
     {
         // handle error
     }
