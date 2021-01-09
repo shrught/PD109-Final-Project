@@ -18,9 +18,12 @@ using namespace sf;
 class Game
 {
 private:
+    
 public:
     Game(); // init
     ~Game();
+    
+    RenderWindow window;
 
     void run();
     void tick();

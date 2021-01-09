@@ -15,7 +15,7 @@ Game::Game()
 
 Game::~Game()
 {
-    ;
+    window.create(VideoMode(WIDTH, HEIGHT), "RAIDEN");
 }
 
 void Game::tick()
