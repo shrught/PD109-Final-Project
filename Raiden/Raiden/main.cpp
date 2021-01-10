@@ -25,7 +25,9 @@ int main() {
   Music music;
     //if (!music.openFromFile("../Resources/audio/raiden.wav"))
     if (!music.openFromFile("Raiden/Resources/audio/raiden.wav"))
-        return -1; // error
+    {
+        music.openFromFile("../Resources/audio/raiden.wav");
+    }
     music.setVolume(20);
     music.setLoop(true);
     music.play();
@@ -33,28 +35,36 @@ int main() {
     SoundBuffer buffer;
    //if (!buffer.loadFromFile("../Resources/audio/pop.wav"))
    if (!buffer.loadFromFile("Raiden/Resources/audio/pop.wav"))
-        return -1;
+   {
+       buffer.loadFromFile("../Resources/audio/pop.wav");
+   }
     Sound pop;
     pop.setVolume(50);
     pop.setBuffer(buffer);
     SoundBuffer bLeave;
     //if (!bLeave.loadFromFile("../Resources/audio/leave.wav"))
     if (!bLeave.loadFromFile("Raiden/Resources/audio/leave.wav"))
-        return -1;
+    {
+        bLeave.loadFromFile("../Resources/audio/leave.wav");
+    }
     Sound leave;
     leave.setVolume(50);
     leave.setBuffer(bLeave);
     SoundBuffer bEnter;
     //if (!bEnter.loadFromFile("../Resources/audio/enter.wav"))
     if (!bEnter.loadFromFile("Raiden/Resources/audio/enter.wav"))
-        return -1;
+    {
+        bEnter.loadFromFile("../Resources/audio/enter.wav");
+    }
     Sound enter;
     enter.setVolume(50);
     enter.setBuffer(bEnter);
     SoundBuffer bOption;
     //if (!bOption.loadFromFile("../Resources/audio/option.wav"))
     if (!bOption.loadFromFile("Raiden/Resources/audio/option.wav"))
-        return -1;
+    {
+        bOption.loadFromFile("../Resources/audio/option.wav");
+    }
     Sound option;
     option.setVolume(50);
     option.setBuffer(bOption);

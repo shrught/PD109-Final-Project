@@ -19,6 +19,7 @@
 #include "fighter.hpp"
 #include "enemy.hpp"
 #include "Firebullet.hpp"
+
 using namespace sf;
 
 
@@ -29,13 +30,7 @@ class Game
     
 private:
     Texture t_vesta;
-    Texture t_plane;
-    Texture t_plane2;
-    
     Sprite vesta;
-    Sprite plane;
-    Sprite plane2;
-
     RenderWindow window;
     
     Fighter player1;
