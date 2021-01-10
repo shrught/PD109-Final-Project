@@ -13,7 +13,7 @@
 class Boss
 {
 private:
-    int health = 1000;
+    int health = 100000;
     Texture t_plane;
     Sprite plane;
     bool alive = 1;
