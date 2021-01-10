@@ -13,6 +13,7 @@
 #include <cstdlib>
 #include <ctime>
 #include <vector>
+#include <string>
 
 
 #include "Firebullet.hpp"
@@ -29,6 +30,16 @@ void Game::run() {
   {
       t_vesta.loadFromFile("../Resources/images/Vesta.jpg");
   }
+    
+//  SoundBuffer bShoot;
+//  if (!bShoot.loadFromFile("Raiden/Resources/audio/shooting.wav"))
+//  {
+//      bShoot.loadFromFile("../Resources/audio/shooting.wav");
+//  }
+//  Sound shoot;
+//  shoot.setVolume(50);
+//  shoot.setBuffer(bShoot);
+    
   RenderWindow window(VideoMode(WIDTH, HEIGHT), "RAIDEN");
 
   vesta.setTexture(t_vesta);
@@ -36,6 +47,24 @@ void Game::run() {
   window.setKeyRepeatEnabled(true);
   Vector2u planeSize;
   vesta.setPosition(0, 0);
+    
+  RectangleShape playerHpBar;
+  RectangleShape playerHpBarBack;
+  playerHpBar.setSize(sf::Vector2f(300.f, 25.f));
+  playerHpBar.setFillColor(sf::Color::Blue);
+  playerHpBar.setPosition(sf::Vector2f(20.f, 20.f));
+
+  RectangleShape playerHpBar2;
+  RectangleShape playerHpBarBack2;
+  playerHpBarBack2 = playerHpBar2;
+  playerHpBarBack2.setFillColor(sf::Color(0, 25, 25, 200));
+    
+  playerHpBar2.setSize(sf::Vector2f(300.f, 25.f));
+  playerHpBar2.setFillColor(sf::Color::Green);
+  playerHpBar2.setPosition(sf::Vector2f(580.f, 20.f));
+
+  playerHpBarBack2 = playerHpBar2;
+  playerHpBarBack2.setFillColor(sf::Color(25, 25, 25, 200));
     
   Clock clock;
   float timer = 0, delay = 0.1;
@@ -127,7 +156,7 @@ void Game::run() {
           {
             player2.move(0.f, speed * dt);
             if (player2.getY() >= window.getSize().y - player2.planeHeight())  // Bottom
-              player2.setPosition(player2.getX(), window.getSize().y - player2.getY());
+              player2.setPosition(player2.getX(), window.getSize().y - player2.planeHeight());
           }
           if (Keyboard::isKeyPressed(Keyboard::Left))
           {
@@ -151,8 +180,20 @@ void Game::run() {
     window.draw(vesta);
     player1.draw(window);
     if (playerNum == 2)
+    {
+        std::cout << "two player";
         player2.draw(window);
+        float hpPercent2 = static_cast<float>(player2.health) / player2.maxHealth;
+        playerHpBar2.setSize(sf::Vector2f(300.f * hpPercent2, playerHpBar2.getSize().y));
+        window.draw(playerHpBarBack2);
+        window.draw(playerHpBar2);
+    }
     Enemy dog(400, 400, 1, window);
+      
+      float hpPercent = static_cast<float>(player1.health) / player1.maxHealth;
+      playerHpBar.setSize(sf::Vector2f(300.f * hpPercent, playerHpBar.getSize().y));
+      window.draw(playerHpBarBack);
+      window.draw(playerHpBar);
 
     if(isFiring == true){
         FBullet newBulletLeft(sf::Vector2f(10,20));
