@@ -139,20 +139,14 @@ void Game::run() {
     /* 固定亂數種子 */
     srand(time(NULL));
 
-    int first = 1;
-    bool appear = true;
-    if (time(NULL) % 5 == 3 && appear == true) {
-       appear == false;
+    if (time(NULL) % 5 == 3 ) {
         int pos_x = (rand() + 67) % 500;
         Enemy dog(pos_x, 0, window);
         dog.update(window);
         // seconds = 0;  // Resets the secondcounter.
       }
     
-    // int seconds = 0;
 
-    // Enemy dog(300, 0, 1, window);
-    // dog.update(window);
 
     if (isFiring == true) {
       FBullet newBulletLeft(sf::Vector2f(10, 20));
