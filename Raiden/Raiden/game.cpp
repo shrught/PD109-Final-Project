@@ -168,15 +168,16 @@ void Game::run() {
     }
 
     for (int i = 0; i < dogs.size(); i += 120) {
-      dogs[i].draw(window);
-      dogs[i].fly(3);
-      if (dogs[i].life == 0) {
+      if (dogs[i].life>=0) {
+        dogs[i].draw(window);
+        dogs[i].fly(5);
+      } else {
         break;
       }
     }
 
     for (int i = 0; i < biggerDogs.size(); i += 120) {
-      if (dogs[i].life>=0) {
+      if (biggerDogs[i].life>=0) {
         biggerDogs[i].draw(window);
         biggerDogs[i].fly(5);
       } else {
@@ -224,11 +225,11 @@ void Game::run() {
     for (int i = 0; i < bulletvecLeft.size(); i += 10) {
       LCK.checkCollision(bulletvecLeft[i]);
       LCK.checkCollision(bulletvecRight[i]);
-      for (int j = 0; j < dogs.size(); j += 120) {
+      for (int j = 0; j < dogs.size(); j++) {
         dogs[j].checkCollision(bulletvecLeft[i]);
         dogs[j].checkCollision(bulletvecRight[i]);
       }
-      for (int j = 0; j < biggerDogs.size(); j += 120) {
+      for (int j = 0; j < biggerDogs.size(); j++) {
         biggerDogs[j].checkCollision(bulletvecLeft[i]);
         biggerDogs[j].checkCollision(bulletvecRight[i]);
       }
@@ -251,11 +252,14 @@ void Game::run() {
       isFiring2 = false;
     }
 
-    for (int i = 0; i < bulletvecLeft2.size(); i += 10) {
-      bulletvecLeft2[i].draw(window);
-      bulletvecRight2[i].draw(window);
-      bulletvecLeft2[i].fire(20);
-      bulletvecRight2[i].fire(20);
+    for (int i = 0; i < bulletvecLeft2.size(); i += 10)
+    {
+        LCK.checkCollision(bulletvecLeft2[i]);
+        LCK.checkCollision(bulletvecRight2[i]);
+        bulletvecLeft2[i].draw(window);
+        bulletvecRight2[i].draw(window);
+        bulletvecLeft2[i].fire(20);
+        bulletvecRight2[i].fire(20);
     }
 
     window.display();
