@@ -8,28 +8,34 @@
 
 #include "game.hpp"
 
-
 #include <unistd.h>
+
 #include <cstdlib>
 #include <ctime>
 #include <vector>
 #include <string>
 
-
 #include "Firebullet.hpp"
 #include "enemy.hpp"
-
+using namespace std;
 Game::Game() { ; }
 
-Game::~Game() { window.create(VideoMode(WIDTH, HEIGHT), "RAIDEN"); }
+Game::~Game() {;}
 
-void Game::run() {
+void Game::run()
+{
+    
     
   //t_vesta.loadFromFile("../Resources/images/Vesta.jpg");
   if (!t_vesta.loadFromFile("Raiden/Resources/images/Vesta.jpg"))
   {
       t_vesta.loadFromFile("../Resources/images/Vesta.jpg");
   }
+    RenderWindow window(VideoMode(WIDTH, HEIGHT), "RAIDEN");
+    vesta.setTexture(t_vesta);
+    vesta.setPosition(0, 0);
+    
+    //window.setKetRepeatEnabled = true;
     
 //  SoundBuffer bShoot;
 //  if (!bShoot.loadFromFile("Raiden/Resources/audio/shooting.wav"))
@@ -39,14 +45,6 @@ void Game::run() {
 //  Sound shoot;
 //  shoot.setVolume(50);
 //  shoot.setBuffer(bShoot);
-    
-  RenderWindow window(VideoMode(WIDTH, HEIGHT), "RAIDEN");
-
-  vesta.setTexture(t_vesta);
-
-  window.setKeyRepeatEnabled(true);
-  Vector2u planeSize;
-  vesta.setPosition(0, 0);
     
   RectangleShape playerHpBar;
   RectangleShape playerHpBarBack;
@@ -66,11 +64,11 @@ void Game::run() {
   playerHpBarBack2 = playerHpBar2;
   playerHpBarBack2.setFillColor(sf::Color(25, 25, 25, 200));
     
+
   Clock clock;
   float timer = 0, delay = 0.1;
   double dt;
   float speed = 500;
-    
   std::vector<FBullet> bulletvecLeft;
   std::vector<FBullet> bulletvecRight;
   std::vector<FBullet> bulletvecLeft2;
@@ -78,71 +76,53 @@ void Game::run() {
   bool isFiring = false;
   bool isFiring2 = false;
 
-
-  while (window.isOpen()) {
+  while (window.isOpen())
+  {
     float dt = clock.restart().asSeconds();
     clock.restart();
     timer += dt;
 
     Event e;
-    while (window.pollEvent(e)) {
+    while (window.pollEvent(e))
+    {
       if (e.type == Event::Closed) window.close();
       if (e.type == Event::KeyPressed && e.key.code == Keyboard::Escape)
         window.close();
     }
 
-    
-    // random enemy
-    /* 固定亂數種子 */
-//    srand(5);
-//    int pos_x = rand() % 100;
-//    srand(30);
-//    int pos_y = rand() % 300;
-//    Enemy dog(pos_x, pos_y, 1, window);
-//    time_t first = time(NULL) + 10;
-
-//    int seconds = 0;
-//    while (true) {
-//      if (time(NULL) >= first) {
-//        first = time(NULL) + 10;  // Saves the time additional 10 seconds ahead from now!
-//        dog.run(window);
-//        seconds = 0;  // Resets the secondcounter.
-//      }
-//    }
-
-    if (Keyboard::isKeyPressed(Keyboard::W)) // Up
-    {
-      player1.move(0.f, -speed * dt);
-      if (player1.getY() <= 0)
-        player1.setPosition(player1.getX(), 0.f);
-    }
-    if (Keyboard::isKeyPressed(Keyboard::S))
-    {
-      player1.move(0.f, speed * dt);
-      if (player1.getY() >= window.getSize().y - player1.planeHeight())  // Bottom
-        player1.setPosition(player1.getX(), window.getSize().y - player1.planeHeight());
-    }
-    if (Keyboard::isKeyPressed(Keyboard::A)) // Left
-    {
-      player1.move(-speed * dt * 1.2, 0.f);
-      if (player1.getX() <= 0)
-        player1.setPosition(0.f, player1.getY());
-    }
-    if (Keyboard::isKeyPressed(Keyboard::D)) // Right
-    {
-      player1.move(speed * dt * 1.2, 0.f);
-      if (player1.getX() >= window.getSize().x - player1.planeWidth())
-          player1.setPosition(window.getSize().x - player1.planeWidth(), player1.getY());
-    }
-
-    if(Keyboard::isKeyPressed(Keyboard::LShift))
-            isFiring = true;
-    
-      if (Keyboard::isKeyPressed(Keyboard::Enter))
+      if (Keyboard::isKeyPressed(Keyboard::W))
       {
-          //std::cout << "player two";
-          playerNum = 2;
+        player1.move(0.f, -speed * dt);
+        if (player1.getY() <= 0)  // Left
+          player1.setPosition(player1.getX(), 0.f);
       }
+      if (Keyboard::isKeyPressed(Keyboard::S))
+      {
+        player1.move(0.f, speed * dt);
+        if (player1.getY() >= window.getSize().y - player1.planeHeight())  // Bottom
+          player1.setPosition(player1.getX(), window.getSize().y - player1.planeHeight());
+      }
+      if (Keyboard::isKeyPressed(Keyboard::A))
+      {
+        player1.move(-speed * dt * 1.2, 0.f);
+        if (player1.getX() <= 0)  // Left
+          player1.setPosition(0.f, player1.getY());
+      }
+      if (Keyboard::isKeyPressed(Keyboard::D))
+      {
+        player1.move(speed * dt * 1.2, 0.f);
+        if (player1.getX() >= window.getSize().x - player1.planeWidth())  // Right
+          player1.setPosition(window.getSize().x - player1.planeWidth(), player1.getY());
+      }
+
+    if (Keyboard::isKeyPressed(Keyboard::LShift))
+        isFiring = true;
+
+    if (Keyboard::isKeyPressed(Keyboard::Enter))
+    {
+      // std::cout << "player two";
+      playerNum = 2;
+    }
       
       if (playerNum == 2)
       {
@@ -173,12 +153,27 @@ void Game::run() {
 
           if(Keyboard::isKeyPressed(Keyboard::M))
                   isFiring2 = true;
+
       }
 
+      if (Keyboard::isKeyPressed(Keyboard::M))
+        isFiring2 = true;
+    
 
     window.clear();
     window.draw(vesta);
     player1.draw(window);
+        
+    /* 固定亂數種子 */
+    srand(time(NULL));
+
+    if (time(NULL) % 5 == 3 ) {
+        int pos_x = (rand() + 67) % 500;
+        Enemy dog(pos_x, 0, window);
+        dog.update(window);
+        // seconds = 0;  // Resets the secondcounter.
+      }
+    
     if (playerNum == 2)
     {
         std::cout << "two player";
@@ -188,7 +183,7 @@ void Game::run() {
         window.draw(playerHpBarBack2);
         window.draw(playerHpBar2);
     }
-    Enemy dog(400, 400, 1, window);
+    //Enemy dog(400, 400, 1, window);
       
       float hpPercent = static_cast<float>(player1.health) / player1.maxHealth;
       playerHpBar.setSize(sf::Vector2f(300.f * hpPercent, playerHpBar.getSize().y));
@@ -215,22 +210,21 @@ void Game::run() {
     if(isFiring2 == true)
     {
       sf::Color p2B = sf::Color::Green;
-      FBullet newBulletLeft2(sf::Vector2f(10,20),p2B);
-      FBullet newBulletRight2(sf::Vector2f(10,20),p2B);
-      newBulletLeft2.setPos(sf::Vector2f(player2.getX() + player2.planeWidth() * (3/7), player2.getY()));
+      FBullet newBulletLeft2(sf::Vector2f(10, 20), p2B);
+      FBullet newBulletRight2(sf::Vector2f(10, 20), p2B);
+      newBulletLeft2.setPos(sf::Vector2f(player2.getX() + player2.planeWidth() * (3/7),player2.getY()));
       newBulletRight2.setPos(sf::Vector2f(player2.getX() + player2.planeWidth(), player2.getY()));
       bulletvecLeft2.push_back(newBulletLeft2);
       bulletvecRight2.push_back(newBulletRight2);
       isFiring2 = false;
     }
 
-      for(int i = 0; i < bulletvecLeft2.size();i += 45)
-      {
-          bulletvecLeft2[i].draw(window);
-          bulletvecRight2[i].draw(window);
-          bulletvecLeft2[i].fire(2);
-          bulletvecRight2[i].fire(2);
-      }
+    for (int i = 0; i < bulletvecLeft2.size(); i += 45) {
+      bulletvecLeft2[i].draw(window);
+      bulletvecRight2[i].draw(window);
+      bulletvecLeft2[i].fire(2);
+      bulletvecRight2[i].fire(2);
+    }
 
     window.display();
   }
