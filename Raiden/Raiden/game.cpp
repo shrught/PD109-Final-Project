@@ -7,28 +7,27 @@
 //
 
 #include "game.hpp"
+
 #include <unistd.h>
+
 #include <cstdlib>
 #include <ctime>
-#include <vector>
 #include <string>
+#include <vector>
 
 #include "Firebullet.hpp"
 #include "enemy.hpp"
 using namespace std;
 Game::Game() { ; }
 
-Game::~Game() {;}
+Game::~Game() { ; }
 
-void Game::run()
-{
-    
-    
-  //t_vesta.loadFromFile("../Resources/images/Vesta.jpg");
-  if (!t_vesta.loadFromFile("Raiden/Resources/images/Vesta.jpg"))
-  {
-      t_vesta.loadFromFile("../Resources/images/Vesta.jpg");
+void Game::run() {
+  // t_vesta.loadFromFile("../Resources/images/Vesta.jpg");
+  if (!t_vesta.loadFromFile("Raiden/Resources/images/Vesta.jpg")) {
+    t_vesta.loadFromFile("../Resources/images/Vesta.jpg");
   }
+
     RenderWindow window(VideoMode(WIDTH, HEIGHT), "RAIDEN");
     window.setFramerateLimit(60);
     vesta.setTexture(t_vesta);
@@ -55,14 +54,13 @@ void Game::run()
   RectangleShape playerHpBarBack2;
   playerHpBarBack2 = playerHpBar2;
   playerHpBarBack2.setFillColor(sf::Color(0, 25, 25, 200));
-    
+
   playerHpBar2.setSize(sf::Vector2f(300.f, 25.f));
   playerHpBar2.setFillColor(sf::Color::Green);
   playerHpBar2.setPosition(sf::Vector2f(580.f, 20.f));
 
   playerHpBarBack2 = playerHpBar2;
   playerHpBarBack2.setFillColor(sf::Color(25, 25, 25, 200));
-    
 
   Clock clock;
   float timer = 0, delay = 0.1;
@@ -72,118 +70,138 @@ void Game::run()
   std::vector<FBullet> bulletvecRight;
   std::vector<FBullet> bulletvecLeft2;
   std::vector<FBullet> bulletvecRight2;
+  std::vector<Enemy> dogs;
+  std::vector<Enemy> biggerDogs;
   bool isFiring = false;
   bool isFiring2 = false;
 
-  while (window.isOpen())
-  {
-      float dt = clock.restart().asSeconds();
-      clock.restart();
-      timer += dt;
+  while (window.isOpen()) {
+    float dt = clock.restart().asSeconds();
+    clock.restart();
+    timer += dt;
 
-      Event e;
-      while (window.pollEvent(e))
-      {
-        if (e.type == Event::Closed) window.close();
-        if (e.type == Event::KeyPressed && e.key.code == Keyboard::Escape)
-            window.close();
-      }
+    Event e;
+    while (window.pollEvent(e)) {
+      if (e.type == Event::Closed) window.close();
+      if (e.type == Event::KeyPressed && e.key.code == Keyboard::Escape)
+        window.close();
+    }
 
-      if (Keyboard::isKeyPressed(Keyboard::W))
-      {
-        player1.move(0.f, -speed * dt);
-        if (player1.getY() <= 0)  // Left
-          player1.setPosition(player1.getX(), 0.f);
-      }
-      if (Keyboard::isKeyPressed(Keyboard::S))
-      {
-        player1.move(0.f, speed * dt);
-        if (player1.getY() >= window.getSize().y - player1.planeHeight())  // Bottom
-          player1.setPosition(player1.getX(), window.getSize().y - player1.planeHeight());
-      }
-      if (Keyboard::isKeyPressed(Keyboard::A))
-      {
-        player1.move(-speed * dt * 1.2, 0.f);
-        if (player1.getX() <= 0)  // Left
-          player1.setPosition(0.f, player1.getY());
-      }
-      if (Keyboard::isKeyPressed(Keyboard::D))
-      {
-        player1.move(speed * dt * 1.2, 0.f);
-        if (player1.getX() >= window.getSize().x - player1.planeWidth())  // Right
-          player1.setPosition(window.getSize().x - player1.planeWidth(), player1.getY());
-      }
+    if (Keyboard::isKeyPressed(Keyboard::W)) {
+      player1.move(0.f, -speed * dt);
+      if (player1.getY() <= 0)  // Left
+        player1.setPosition(player1.getX(), 0.f);
+    }
+    if (Keyboard::isKeyPressed(Keyboard::S)) {
+      player1.move(0.f, speed * dt);
+      if (player1.getY() >=
+          window.getSize().y - player1.planeHeight())  // Bottom
+        player1.setPosition(player1.getX(),
+                            window.getSize().y - player1.planeHeight());
+    }
+    if (Keyboard::isKeyPressed(Keyboard::A)) {
+      player1.move(-speed * dt * 1.2, 0.f);
+      if (player1.getX() <= 0)  // Left
+        player1.setPosition(0.f, player1.getY());
+    }
+    if (Keyboard::isKeyPressed(Keyboard::D)) {
+      player1.move(speed * dt * 1.2, 0.f);
+      if (player1.getX() >= window.getSize().x - player1.planeWidth())  // Right
+        player1.setPosition(window.getSize().x - player1.planeWidth(),
+                            player1.getY());
+    }
 
-    if (Keyboard::isKeyPressed(Keyboard::LShift))
-        isFiring = true;
+    if (Keyboard::isKeyPressed(Keyboard::LShift)) isFiring = true;
 
-    if (Keyboard::isKeyPressed(Keyboard::Enter))
-    {
+    if (Keyboard::isKeyPressed(Keyboard::Enter)) {
       // std::cout << "player two";
       playerNum = 2;
     }
-      
-      if (playerNum == 2)
+
+    if (playerNum == 2)
+    {
+      if (Keyboard::isKeyPressed(Keyboard::Up))
       {
-          if (Keyboard::isKeyPressed(Keyboard::Up))
-          {
-            player2.move(0.f, -speed * dt);
-            if (player2.getY() <= 0)  // Left
-              player2.setPosition(player2.getX(), 0.f);
-          }
-          if (Keyboard::isKeyPressed(Keyboard::Down))
-          {
-            player2.move(0.f, speed * dt);
-            if (player2.getY() >= window.getSize().y - player2.planeHeight())  // Bottom
-              player2.setPosition(player2.getX(), window.getSize().y - player2.planeHeight());
-          }
-          if (Keyboard::isKeyPressed(Keyboard::Left))
-          {
-            player2.move(-speed * dt * 1.2, 0.f);
-            if (player2.getX() <= 0)  // Left
-              player2.setPosition(0.f, player2.getY());
-          }
-          if (Keyboard::isKeyPressed(Keyboard::Right))
-          {
-            player2.move(speed * dt * 1.2, 0.f);
-            if (player2.getX() >= window.getSize().x - player2.planeWidth())  // Right
-              player2.setPosition(window.getSize().x - player2.planeWidth(), player2.getY());
-          }
-
-          if(Keyboard::isKeyPressed(Keyboard::M))
-                  isFiring2 = true;
-
+        player2.move(0.f, -speed * dt);
+        if (player2.getY() <= 0)  // Left
+          player2.setPosition(player2.getX(), 0.f);
+      }
+      if (Keyboard::isKeyPressed(Keyboard::Down))
+      {
+        player2.move(0.f, speed * dt);
+        if (player2.getY() >= window.getSize().y - player2.planeHeight())  // Bottom
+          player2.setPosition(player2.getX(), window.getSize().y - player2.planeHeight());
+      }
+      if (Keyboard::isKeyPressed(Keyboard::Left))
+      {
+        player2.move(-speed * dt * 1.2, 0.f);
+        if (player2.getX() <= 0)  // Left
+          player2.setPosition(0.f, player2.getY());
+      }
+      if (Keyboard::isKeyPressed(Keyboard::Right))
+      {
+        player2.move(speed * dt * 1.2, 0.f);
+        if (player2.getX() >= window.getSize().x - player2.planeWidth())  // Right
+          player2.setPosition(window.getSize().x - player2.planeWidth(),
+                              player2.getY());
       }
     
-    LCK.move();
-    window.clear();
-    window.draw(vesta);
-    player1.draw(window);
-    LCK.draw(window);
-        
+      if (Keyboard::isKeyPressed(Keyboard::M))
+          isFiring2 = true;
+    }
+      
+      LCK.move();
+      window.clear();
+      window.draw(vesta);
+      player1.draw(window);
+      LCK.draw(window);
+
     /* 固定亂數種子 */
     srand(time(NULL));
 
-    if (time(NULL) % 5 == 3 )
-    {
-        int pos_x = (rand() + 67) % 500;
-        Enemy dog(pos_x, 0, window);
-        dog.update(window);
-        // seconds = 0;  // Resets the secondcounter.
+    if (time(NULL) % 2 == 1) {
+      int pos_x = (rand() + 67) % 500;
+      Enemy dog(pos_x, 0, window,50);
+      dogs.push_back(dog);
+    }
+    if (time(NULL) % 7 == 1) {
+      int pos_x = (rand() + 91) % 500;
+      Enemy biggerDog(pos_x, 0, window,90);
+      biggerDogs.push_back(biggerDog);
     }
     
-    if (playerNum == 2)
-    {
-        player2.draw(window);
-        float hpPercent2 = static_cast<float>(player2.health) / player2.maxHealth;
-        playerHpBar2.setSize(sf::Vector2f(300.f * hpPercent2, playerHpBar2.getSize().y));
-        window.draw(playerHpBarBack2);
-        window.draw(playerHpBar2);
+    for (int i = 0; i < dogs.size(); i+=120) {
+      dogs[i].draw(window);
+      dogs[i].fly(3);
     }
-    //Enemy dog(400, 400, 1, window);
-      
+
+    for (int i = 0; i < biggerDogs.size(); i+=120) {
+      dogs[i].draw(window);
+      dogs[i].fly(7);
+    }
+
+    // dog.update(window);
+    // seconds = 0;  // Resets the secondcounter.
+
+    for (int i = 0; i < bulletvecLeft.size(); i += 45) {
+      bulletvecLeft[i].fire(2);
+      bulletvecRight[i].draw(window);
+      bulletvecRight[i].fire(2);
+    }
+
+    if (playerNum == 2) {
+      player2.draw(window);
+      float hpPercent2 = static_cast<float>(player2.health) / player2.maxHealth;
+      playerHpBar2.setSize(
+          sf::Vector2f(300.f * hpPercent2, playerHpBar2.getSize().y));
+      window.draw(playerHpBarBack2);
+      window.draw(playerHpBar2);
+    }
+    // Enemy dog(400, 400, 1, window);
+
     float hpPercent = static_cast<float>(player1.health) / player1.maxHealth;
-    playerHpBar.setSize(sf::Vector2f(300.f * hpPercent, playerHpBar.getSize().y));
+    playerHpBar.setSize(
+        sf::Vector2f(300.f * hpPercent, playerHpBar.getSize().y));
     window.draw(playerHpBarBack);
     window.draw(playerHpBar);
 

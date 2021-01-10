@@ -1,34 +1,37 @@
 #include "enemy.hpp"
-using namespace std;
 #include <iostream>
+using namespace std;
 
-Enemy::Enemy(float x_, float y_, RenderWindow& window)
-{
-    if (!graphic.loadFromFile("Raiden/Resources/images/pdogs.png"))
-    {
-        graphic.loadFromFile("../Resources/images/pdogs.png");
-    }
-  
+void Enemy::draw(sf::RenderWindow& window) {
+  pdogs.setTexture(graphic);
+  window.draw(pdogs);
+}
+
+Enemy::Enemy(float x_, float y_, RenderWindow& window,double size) {
+  if (!graphic.loadFromFile("Raiden/Resources/images/pdogs.png")) {
+    graphic.loadFromFile("../Resources/images/pdogs.png");
+  }
   // graphic.loadFromFile("../Resources/images/pdogs.png");
   pdogs.setTexture(graphic);
   pdogs.setPosition(Vector2f(x_, y_));
-  pdogs.setScale(0.4, 0.4);
-  window.draw(pdogs);
-
+  pdogs.setScale(size/10, size/10);
+  life = 10;
+  // window.draw(pdogs);
 }
 
-void Enemy::update(RenderWindow& window)
+void Enemy::fly(int speed) {
+  pdogs.setTexture(graphic);
+  pdogs.move(0, speed);
+}
+
+void Enemy::checkCollision(FBullet bullet)
 {
-  int dt = (time(NULL) % 10) + 1;
-  //cout << dt << endl;
-  pdogs.move(0, 50);
-  // cout << "move";
-  window.draw(pdogs);
+  if (bullet.getBottom() >= pdogs.getPosition().y &&
+      bullet.getLeft() >= pdogs.getPosition().x + 20 &&
+      bullet.getRight() <= pdogs.getPosition().x + 20)
+    life -= 1;
+  if (life == 0) {
+    // life -= 1;
+    // plane.setPosition(Vector2f(4234432, 4234423));
+  }
 }
-
-// const int MAX_ENTITES = 100;
-
-// std::vector<Enemy *> v;
-
-// Pdogs* pdogs = new Pdogs("pdogs.png");
-//寫一個random生成？
