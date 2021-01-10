@@ -157,23 +157,29 @@ void Game::run() {
 
     if (time(NULL) % 2 == 1) {
       int pos_x = (rand() + 67) % 500;
-      Enemy dog(pos_x, 0, window,50);
+      Enemy dog(pos_x, 0, window, 5);
       dogs.push_back(dog);
     }
     if (time(NULL) % 7 == 1) {
       int pos_x = (rand() + 91) % 500;
-      Enemy biggerDog(pos_x, 0, window,90);
+      Enemy biggerDog(pos_x, 0, window,7.5);
       biggerDogs.push_back(biggerDog);
     }
-    
-    for (int i = 0; i < dogs.size(); i+=120) {
+
+    for (int i = 0; i < dogs.size(); i += 120) {
       dogs[i].draw(window);
       dogs[i].fly(3);
+      if (dogs[i].life == 0) {
+        break;
+      }
     }
 
-    for (int i = 0; i < biggerDogs.size(); i+=120) {
-      dogs[i].draw(window);
-      dogs[i].fly(7);
+    for (int i = 0; i < biggerDogs.size(); i += 120) {
+      biggerDogs[i].draw(window);
+      biggerDogs[i].fly(5);
+      if (dogs[i].life == 0) {
+        break;
+      }
     }
 
     // dog.update(window);

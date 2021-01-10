@@ -30,8 +30,11 @@ void Enemy::checkCollision(FBullet bullet)
       bullet.getLeft() >= pdogs.getPosition().x + 20 &&
       bullet.getRight() <= pdogs.getPosition().x + 20)
     life -= 1;
-  if (life == 0) {
     // life -= 1;
     // plane.setPosition(Vector2f(4234432, 4234423));
-  }
+  
 }
+
+
+
+  
