@@ -246,6 +246,8 @@ void Game::run() {
 
     for (int i = 0; i < bulletvecLeft2.size(); i += 10)
     {
+        LCK.checkCollision(bulletvecLeft2[i]);
+        LCK.checkCollision(bulletvecRight2[i]);
         bulletvecLeft2[i].draw(window);
         bulletvecRight2[i].draw(window);
         bulletvecLeft2[i].fire(20);

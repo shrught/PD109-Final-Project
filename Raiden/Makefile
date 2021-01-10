@@ -32,6 +32,4 @@ Raiden/game.o: Raiden/game.cpp
 
 clean:
 	@rm -rf *.o 
-
-remove: clean
 	@rm -rf RGame
