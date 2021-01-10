@@ -18,6 +18,7 @@ class Enemy {
  private:
   float x_;
   float y_;
+  double size;
   Sprite pdogs;
   Texture graphic;
   

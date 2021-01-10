@@ -28,22 +28,22 @@ void Game::run() {
     t_vesta.loadFromFile("../Resources/images/Vesta.jpg");
   }
 
-    RenderWindow window(VideoMode(WIDTH, HEIGHT), "RAIDEN");
-    window.setFramerateLimit(60);
-    vesta.setTexture(t_vesta);
-    vesta.setPosition(0, 0);
-    
-    //window.setKetRepeatEnabled = true;
-    
-//  SoundBuffer bShoot;
-//  if (!bShoot.loadFromFile("Raiden/Resources/audio/shooting.wav"))
-//  {
-//      bShoot.loadFromFile("../Resources/audio/shooting.wav");
-//  }
-//  Sound shoot;
-//  shoot.setVolume(50);
-//  shoot.setBuffer(bShoot);
-    
+  RenderWindow window(VideoMode(WIDTH, HEIGHT), "RAIDEN");
+  window.setFramerateLimit(60);
+  vesta.setTexture(t_vesta);
+  vesta.setPosition(0, 0);
+
+  // window.setKetRepeatEnabled = true;
+
+  //  SoundBuffer bShoot;
+  //  if (!bShoot.loadFromFile("Raiden/Resources/audio/shooting.wav"))
+  //  {
+  //      bShoot.loadFromFile("../Resources/audio/shooting.wav");
+  //  }
+  //  Sound shoot;
+  //  shoot.setVolume(50);
+  //  shoot.setBuffer(bShoot);
+
   RectangleShape playerHpBar;
   RectangleShape playerHpBarBack;
   playerHpBar.setSize(sf::Vector2f(300.f, 25.f));
@@ -118,43 +118,40 @@ void Game::run() {
       playerNum = 2;
     }
 
-    if (playerNum == 2)
-    {
-      if (Keyboard::isKeyPressed(Keyboard::Up))
-      {
+    if (playerNum == 2) {
+      if (Keyboard::isKeyPressed(Keyboard::Up)) {
         player2.move(0.f, -speed * dt);
         if (player2.getY() <= 0)  // Left
           player2.setPosition(player2.getX(), 0.f);
       }
-      if (Keyboard::isKeyPressed(Keyboard::Down))
-      {
+      if (Keyboard::isKeyPressed(Keyboard::Down)) {
         player2.move(0.f, speed * dt);
-        if (player2.getY() >= window.getSize().y - player2.planeHeight())  // Bottom
-          player2.setPosition(player2.getX(), window.getSize().y - player2.planeHeight());
+        if (player2.getY() >=
+            window.getSize().y - player2.planeHeight())  // Bottom
+          player2.setPosition(player2.getX(),
+                              window.getSize().y - player2.planeHeight());
       }
-      if (Keyboard::isKeyPressed(Keyboard::Left))
-      {
+      if (Keyboard::isKeyPressed(Keyboard::Left)) {
         player2.move(-speed * dt * 1.2, 0.f);
         if (player2.getX() <= 0)  // Left
           player2.setPosition(0.f, player2.getY());
       }
-      if (Keyboard::isKeyPressed(Keyboard::Right))
-      {
+      if (Keyboard::isKeyPressed(Keyboard::Right)) {
         player2.move(speed * dt * 1.2, 0.f);
-        if (player2.getX() >= window.getSize().x - player2.planeWidth())  // Right
+        if (player2.getX() >=
+            window.getSize().x - player2.planeWidth())  // Right
           player2.setPosition(window.getSize().x - player2.planeWidth(),
                               player2.getY());
       }
-    
-      if (Keyboard::isKeyPressed(Keyboard::M))
-          isFiring2 = true;
+
+      if (Keyboard::isKeyPressed(Keyboard::M)) isFiring2 = true;
     }
-      
-      LCK.move();
-      window.clear();
-      window.draw(vesta);
-      player1.draw(window);
-      LCK.draw(window);
+
+    LCK.move();
+    window.clear();
+    window.draw(vesta);
+    player1.draw(window);
+    LCK.draw(window);
 
     /* 固定亂數種子 */
     srand(time(NULL));
@@ -166,7 +163,7 @@ void Game::run() {
     }
     if (time(NULL) % 7 == 1) {
       int pos_x = (rand() + 91) % 500;
-      Enemy biggerDog(pos_x, 0, window,7.5);
+      Enemy biggerDog(pos_x, 0, window, 7.5);
       biggerDogs.push_back(biggerDog);
     }
 
@@ -179,9 +176,10 @@ void Game::run() {
     }
 
     for (int i = 0; i < biggerDogs.size(); i += 120) {
-      biggerDogs[i].draw(window);
-      biggerDogs[i].fly(5);
-      if (dogs[i].life == 0) {
+      if (dogs[i].life>=0) {
+        biggerDogs[i].draw(window);
+        biggerDogs[i].fly(5);
+      } else {
         break;
       }
     }
@@ -211,45 +209,53 @@ void Game::run() {
     window.draw(playerHpBarBack);
     window.draw(playerHpBar);
 
-    if(isFiring == true)
-    {
-        FBullet newBulletLeft(sf::Vector2f(10,20));
-        FBullet newBulletRight(sf::Vector2f(10,20));
-        newBulletLeft.setPos(sf::Vector2f(player1.getX() + player1.planeWidth() * (3/7),player1.getY()));
-        newBulletRight.setPos(sf::Vector2f(player1.getX() + player1.planeWidth(), player1.getY()));
-        bulletvecLeft.push_back(newBulletLeft);
-        bulletvecRight.push_back(newBulletRight);
-        isFiring = false;
+    if (isFiring == true) {
+      FBullet newBulletLeft(sf::Vector2f(10, 20));
+      FBullet newBulletRight(sf::Vector2f(10, 20));
+      newBulletLeft.setPos(sf::Vector2f(
+          player1.getX() + player1.planeWidth() * (3 / 7), player1.getY()));
+      newBulletRight.setPos(
+          sf::Vector2f(player1.getX() + player1.planeWidth(), player1.getY()));
+      bulletvecLeft.push_back(newBulletLeft);
+      bulletvecRight.push_back(newBulletRight);
+      isFiring = false;
     }
 
-    for(int i = 0; i < bulletvecLeft.size();i += 10)
-    {
-        LCK.checkCollision(bulletvecLeft[i]);
-        LCK.checkCollision(bulletvecRight[i]);
-        bulletvecLeft[i].draw(window);
-        bulletvecLeft[i].fire(20);
-        bulletvecRight[i].draw(window);
-        bulletvecRight[i].fire(20);
-    }
-      
-    if(isFiring2 == true)
-    {
-        sf::Color p2B = sf::Color::Green;
-        FBullet newBulletLeft2(sf::Vector2f(10, 20), p2B);
-        FBullet newBulletRight2(sf::Vector2f(10, 20), p2B);
-        newBulletLeft2.setPos(sf::Vector2f(player2.getX() + player2.planeWidth() * (3/7),player2.getY()));
-        newBulletRight2.setPos(sf::Vector2f(player2.getX() + player2.planeWidth(), player2.getY()));
-        bulletvecLeft2.push_back(newBulletLeft2);
-        bulletvecRight2.push_back(newBulletRight2);
-        isFiring2 = false;
+    for (int i = 0; i < bulletvecLeft.size(); i += 10) {
+      LCK.checkCollision(bulletvecLeft[i]);
+      LCK.checkCollision(bulletvecRight[i]);
+      for (int j = 0; j < dogs.size(); j += 120) {
+        dogs[j].checkCollision(bulletvecLeft[i]);
+        dogs[j].checkCollision(bulletvecRight[i]);
+      }
+      for (int j = 0; j < biggerDogs.size(); j += 120) {
+        biggerDogs[j].checkCollision(bulletvecLeft[i]);
+        biggerDogs[j].checkCollision(bulletvecRight[i]);
+      }
+      bulletvecLeft[i].draw(window);
+      bulletvecLeft[i].fire(20);
+      bulletvecRight[i].draw(window);
+      bulletvecRight[i].fire(20);
     }
 
-    for (int i = 0; i < bulletvecLeft2.size(); i += 10)
-    {
-        bulletvecLeft2[i].draw(window);
-        bulletvecRight2[i].draw(window);
-        bulletvecLeft2[i].fire(20);
-        bulletvecRight2[i].fire(20);
+    if (isFiring2 == true) {
+      sf::Color p2B = sf::Color::Green;
+      FBullet newBulletLeft2(sf::Vector2f(10, 20), p2B);
+      FBullet newBulletRight2(sf::Vector2f(10, 20), p2B);
+      newBulletLeft2.setPos(sf::Vector2f(
+          player2.getX() + player2.planeWidth() * (3 / 7), player2.getY()));
+      newBulletRight2.setPos(
+          sf::Vector2f(player2.getX() + player2.planeWidth(), player2.getY()));
+      bulletvecLeft2.push_back(newBulletLeft2);
+      bulletvecRight2.push_back(newBulletRight2);
+      isFiring2 = false;
+    }
+
+    for (int i = 0; i < bulletvecLeft2.size(); i += 10) {
+      bulletvecLeft2[i].draw(window);
+      bulletvecRight2[i].draw(window);
+      bulletvecLeft2[i].fire(20);
+      bulletvecRight2[i].fire(20);
     }
 
     window.display();
