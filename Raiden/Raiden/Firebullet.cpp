@@ -2,6 +2,8 @@
 #include <SFML/GpuPreference.hpp>
 #include <iostream>
 
+using namespace sf;
+
 
 FBullet::FBullet(sf::Vector2f size){
     bullet.setSize(size);
@@ -36,7 +38,17 @@ int FBullet::getBottom(){
 }
 
 void FBullet::draw(sf::RenderWindow &window){
+//    SoundBuffer bShoot;
+//    if (!bShoot.loadFromFile("Raiden/Resources/audio/shooting.WAV"))
+//    {
+//        bShoot.loadFromFile("../Resources/audio/shooting.WAV");
+//    }
+//    Sound shoot;
+//    shoot.setVolume(50);
+//    shoot.setBuffer(bShoot);
+      
     window.draw(bullet);
+//    shoot.play();
 }
 
 void FBullet::setPos(sf::Vector2f newPos){

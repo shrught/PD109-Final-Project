@@ -8,6 +8,7 @@
 
 #include "info.hpp"
 #include <iostream>
+#include "config.h"
 
 
 Info::Info(float width, float height)
@@ -18,9 +19,9 @@ Info::Info(float width, float height)
     // }
 
     //if (!pages_texture[0].loadFromFile("../Resources/images/instra1.png"))
-    if (!pages_texture[0].loadFromFile("Raiden/Resources/images/instra1.png"))
+    if (!pages_texture[0].loadFromFile("Raiden/Resources/images/instruction1.jpg"))
     {
-        pages_texture[0].loadFromFile("../Resources/images/instra1.png");
+        pages_texture[0].loadFromFile("../Resources/images/instruction1.jpg");
         // handle error
     }
     //if (!pages_texture[1].loadFromFile("../Resources/images/instra2.png"))
@@ -50,12 +51,6 @@ Info::~Info()
 
 void Info::info_state()
 {
-    const int SIZE = 15; // default: 15 --> Do not modify
-    const int W = 60, H = 50; // 60, 50
-    const int WIDTH = SIZE * W;
-    const int HEIGHT = SIZE * H;
-    
-    
     SoundBuffer buffer;
     //if (!buffer.loadFromFile("../Resources/audio/pop.wav"))
     if (!buffer.loadFromFile("Raiden/Resources/audio/pop.wav"))

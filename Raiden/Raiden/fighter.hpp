@@ -9,7 +9,7 @@
 #pragma once
 #include "config.h"
 #include <SFML/Graphics.hpp>
-#include "config.h"
+#include "Firebullet.hpp"
 
 using namespace sf;
 
@@ -26,6 +26,7 @@ public:
     float planeWidth() const;
     float planeHeight() const;
     int getPlayerNum() const;
+    void checkCollision(FBullet bullet);
     void draw(RenderWindow& window);
 
     
@@ -34,7 +35,9 @@ private:
     Sprite plane;
     
     int health = 100;
+    int maxHealth = 100;
     int life = 3;
+    int points = 0;
     int bulletType = 1;
     bool alive = 1;
     static int playerNum;

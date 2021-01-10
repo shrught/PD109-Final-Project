@@ -19,9 +19,20 @@ int Fighter::getPlayerNum() const
 Fighter::Fighter()
 {
     Fighter::playerNum ++;
-    if (!t_plane.loadFromFile("../Resources/images/plane.png"))
+    if (playerNum == 1)
     {
-        t_plane.loadFromFile("Raiden/Resources/images/plane.png");
+        if (!t_plane.loadFromFile("../Resources/images/plane.png"))
+        {
+            t_plane.loadFromFile("Raiden/Resources/images/plane.png");
+        }
+    }
+    
+    else if (playerNum == 2)
+    {
+        if (!t_plane.loadFromFile("../Resources/images/plane2.png"))
+        {
+            t_plane.loadFromFile("Raiden/Resources/images/plane2.png");
+        }
     }
     //t_plane.loadFromFile("Raiden/Resources/images/plane.png");
     plane.setTexture(t_plane);
@@ -60,6 +71,17 @@ void Fighter::setPosition(float x, float y)
 void Fighter::move(float x, float y)
 {
     plane.move(x, y);
+}
+
+void Fighter::checkCollision(FBullet bullet)
+{
+    if (bullet.getBottom() >= getY() && bullet.getLeft() >= getX() + planeHeight() && bullet.getRight() <= getX() + planeWidth())
+        health -= 50;
+    if (health <= 0)
+    {
+        life -= 1;
+        plane.setPosition(Vector2f(4234432, 4234423));
+    }
 }
 
 void Fighter::draw(RenderWindow& window)
