@@ -70,6 +70,7 @@ void Game::run() {
   std::vector<FBullet> bulletvecLeft2;
   std::vector<FBullet> bulletvecRight2;
   std::vector<Enemy> dogs;
+  std::vector<Enemy> biggerDogs;
   bool isFiring = false;
   bool isFiring2 = false;
 
@@ -156,15 +157,21 @@ void Game::run() {
 
     if (time(NULL) % 2 == 1) {
       int pos_x = (rand() + 67) % 500;
-      Enemy dog(pos_x, 0, window);
+      Enemy dog(pos_x, 0, window,50);
       dogs.push_back(dog);
     }
+    if (time(NULL) % 7 == 1) {
+      int pos_x = (rand() + 91) % 500;
+      Enemy biggerDog(pos_x, 0, window,90);
+      biggerDogs.push_back(biggerDog);
+    }
+    
     for (int i = 0; i < dogs.size(); i+=120) {
       dogs[i].draw(window);
       dogs[i].fly(3);
     }
 
-    for (int i = 0; i < dogs.size(); i+=120) {
+    for (int i = 0; i < biggerDogs.size(); i+=120) {
       dogs[i].draw(window);
       dogs[i].fly(7);
     }

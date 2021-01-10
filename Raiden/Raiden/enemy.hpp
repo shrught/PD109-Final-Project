@@ -9,7 +9,7 @@ using namespace sf;
 
 class Enemy {
  public:
-  Enemy(float x_, float y_, RenderWindow&);
+  Enemy(float x_, float y_, RenderWindow&,double size);
   int collision;
   // void run();
   void update(RenderWindow& window);

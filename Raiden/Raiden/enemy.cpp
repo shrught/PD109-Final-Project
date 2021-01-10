@@ -7,14 +7,14 @@ void Enemy::draw(sf::RenderWindow& window) {
   window.draw(pdogs);
 }
 
-Enemy::Enemy(float x_, float y_, RenderWindow& window) {
+Enemy::Enemy(float x_, float y_, RenderWindow& window,double size) {
   if (!graphic.loadFromFile("Raiden/Resources/images/pdogs.png")) {
     graphic.loadFromFile("../Resources/images/pdogs.png");
   }
   // graphic.loadFromFile("../Resources/images/pdogs.png");
   pdogs.setTexture(graphic);
   pdogs.setPosition(Vector2f(x_, y_));
-  pdogs.setScale(0.5, 0.5);
+  pdogs.setScale(size/10, size/10);
   life = 10;
   // window.draw(pdogs);
 }
