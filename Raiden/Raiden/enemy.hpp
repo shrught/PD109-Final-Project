@@ -14,6 +14,7 @@ class Enemy {
   void fly(int speed);
   int life;
   void checkCollision(FBullet bullet);
+  
 
  private:
   float x_;
