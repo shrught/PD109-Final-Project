@@ -30,6 +30,7 @@ void Game::run()
       t_vesta.loadFromFile("../Resources/images/Vesta.jpg");
   }
     RenderWindow window(VideoMode(WIDTH, HEIGHT), "RAIDEN");
+    window.setFramerateLimit(60);
     vesta.setTexture(t_vesta);
     vesta.setPosition(0, 0);
     
@@ -153,14 +154,12 @@ void Game::run()
                   isFiring2 = true;
 
       }
-
-      if (Keyboard::isKeyPressed(Keyboard::M))
-        isFiring2 = true;
     
-
+    LCK.move();
     window.clear();
     window.draw(vesta);
     player1.draw(window);
+    LCK.draw(window);
         
     /* 固定亂數種子 */
     srand(time(NULL));
@@ -199,12 +198,12 @@ void Game::run()
         isFiring = false;
     }
 
-    for(int i = 0; i < bulletvecLeft.size();i += 45)
+    for(int i = 0; i < bulletvecLeft.size();i += 10)
     {
         bulletvecLeft[i].draw(window);
-        bulletvecLeft[i].fire(2);
+        bulletvecLeft[i].fire(20);
         bulletvecRight[i].draw(window);
-        bulletvecRight[i].fire(2);
+        bulletvecRight[i].fire(20);
     }
       
     if(isFiring2 == true)
@@ -219,12 +218,12 @@ void Game::run()
         isFiring2 = false;
     }
 
-    for (int i = 0; i < bulletvecLeft2.size(); i += 45)
+    for (int i = 0; i < bulletvecLeft2.size(); i += 10)
     {
         bulletvecLeft2[i].draw(window);
         bulletvecRight2[i].draw(window);
-        bulletvecLeft2[i].fire(2);
-        bulletvecRight2[i].fire(2);
+        bulletvecLeft2[i].fire(20);
+        bulletvecRight2[i].fire(20);
     }
 
     window.display();

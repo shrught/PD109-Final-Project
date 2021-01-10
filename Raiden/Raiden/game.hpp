@@ -19,6 +19,7 @@
 #include "fighter.hpp"
 #include "enemy.hpp"
 #include "Firebullet.hpp"
+#include "professor.hpp"
 
 using namespace sf;
 
@@ -35,6 +36,7 @@ private:
     
     Fighter player1;
     Fighter player2;
+    Boss LCK;
     int playerNum = 1;
 public:
     Game(); // init
