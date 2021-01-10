@@ -37,7 +37,8 @@ int FBullet::getBottom(){
     return bullet.getPosition().y + bullet.getSize().y;
 }
 
-void FBullet::draw(sf::RenderWindow &window){
+void FBullet::draw(sf::RenderWindow &window)
+{
 //    SoundBuffer bShoot;
 //    if (!bShoot.loadFromFile("Raiden/Resources/audio/shooting.WAV"))
 //    {

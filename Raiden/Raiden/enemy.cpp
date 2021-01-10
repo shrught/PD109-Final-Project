@@ -17,9 +17,8 @@ Enemy::Enemy(float x_, float y_, RenderWindow& window)
 
 }
 
-void Enemy::update(RenderWindow& window) {
- 
- 
+void Enemy::update(RenderWindow& window)
+{
   int dt = (time(NULL) % 10) + 1;
   //cout << dt << endl;
   pdogs.move(0, 50);

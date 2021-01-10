@@ -7,9 +7,7 @@
 //
 
 #include "game.hpp"
-
 #include <unistd.h>
-
 #include <cstdlib>
 #include <ctime>
 #include <vector>
@@ -78,17 +76,17 @@ void Game::run()
 
   while (window.isOpen())
   {
-    float dt = clock.restart().asSeconds();
-    clock.restart();
-    timer += dt;
+      float dt = clock.restart().asSeconds();
+      clock.restart();
+      timer += dt;
 
-    Event e;
-    while (window.pollEvent(e))
-    {
-      if (e.type == Event::Closed) window.close();
-      if (e.type == Event::KeyPressed && e.key.code == Keyboard::Escape)
-        window.close();
-    }
+      Event e;
+      while (window.pollEvent(e))
+      {
+        if (e.type == Event::Closed) window.close();
+        if (e.type == Event::KeyPressed && e.key.code == Keyboard::Escape)
+            window.close();
+      }
 
       if (Keyboard::isKeyPressed(Keyboard::W))
       {
@@ -167,16 +165,16 @@ void Game::run()
     /* 固定亂數種子 */
     srand(time(NULL));
 
-    if (time(NULL) % 5 == 3 ) {
+    if (time(NULL) % 5 == 3 )
+    {
         int pos_x = (rand() + 67) % 500;
         Enemy dog(pos_x, 0, window);
         dog.update(window);
         // seconds = 0;  // Resets the secondcounter.
-      }
+    }
     
     if (playerNum == 2)
     {
-        std::cout << "two player";
         player2.draw(window);
         float hpPercent2 = static_cast<float>(player2.health) / player2.maxHealth;
         playerHpBar2.setSize(sf::Vector2f(300.f * hpPercent2, playerHpBar2.getSize().y));
@@ -185,12 +183,13 @@ void Game::run()
     }
     //Enemy dog(400, 400, 1, window);
       
-      float hpPercent = static_cast<float>(player1.health) / player1.maxHealth;
-      playerHpBar.setSize(sf::Vector2f(300.f * hpPercent, playerHpBar.getSize().y));
-      window.draw(playerHpBarBack);
-      window.draw(playerHpBar);
+    float hpPercent = static_cast<float>(player1.health) / player1.maxHealth;
+    playerHpBar.setSize(sf::Vector2f(300.f * hpPercent, playerHpBar.getSize().y));
+    window.draw(playerHpBarBack);
+    window.draw(playerHpBar);
 
-    if(isFiring == true){
+    if(isFiring == true)
+    {
         FBullet newBulletLeft(sf::Vector2f(10,20));
         FBullet newBulletRight(sf::Vector2f(10,20));
         newBulletLeft.setPos(sf::Vector2f(player1.getX() + player1.planeWidth() * (3/7),player1.getY()));
@@ -198,32 +197,34 @@ void Game::run()
         bulletvecLeft.push_back(newBulletLeft);
         bulletvecRight.push_back(newBulletRight);
         isFiring = false;
-        }
-
-        for(int i = 0; i < bulletvecLeft.size();i += 45){
-            bulletvecLeft[i].draw(window);
-            bulletvecLeft[i].fire(2);
-            bulletvecRight[i].draw(window);
-            bulletvecRight[i].fire(2);
-
-        }
-    if(isFiring2 == true)
-    {
-      sf::Color p2B = sf::Color::Green;
-      FBullet newBulletLeft2(sf::Vector2f(10, 20), p2B);
-      FBullet newBulletRight2(sf::Vector2f(10, 20), p2B);
-      newBulletLeft2.setPos(sf::Vector2f(player2.getX() + player2.planeWidth() * (3/7),player2.getY()));
-      newBulletRight2.setPos(sf::Vector2f(player2.getX() + player2.planeWidth(), player2.getY()));
-      bulletvecLeft2.push_back(newBulletLeft2);
-      bulletvecRight2.push_back(newBulletRight2);
-      isFiring2 = false;
     }
 
-    for (int i = 0; i < bulletvecLeft2.size(); i += 45) {
-      bulletvecLeft2[i].draw(window);
-      bulletvecRight2[i].draw(window);
-      bulletvecLeft2[i].fire(2);
-      bulletvecRight2[i].fire(2);
+    for(int i = 0; i < bulletvecLeft.size();i += 45)
+    {
+        bulletvecLeft[i].draw(window);
+        bulletvecLeft[i].fire(2);
+        bulletvecRight[i].draw(window);
+        bulletvecRight[i].fire(2);
+    }
+      
+    if(isFiring2 == true)
+    {
+        sf::Color p2B = sf::Color::Green;
+        FBullet newBulletLeft2(sf::Vector2f(10, 20), p2B);
+        FBullet newBulletRight2(sf::Vector2f(10, 20), p2B);
+        newBulletLeft2.setPos(sf::Vector2f(player2.getX() + player2.planeWidth() * (3/7),player2.getY()));
+        newBulletRight2.setPos(sf::Vector2f(player2.getX() + player2.planeWidth(), player2.getY()));
+        bulletvecLeft2.push_back(newBulletLeft2);
+        bulletvecRight2.push_back(newBulletRight2);
+        isFiring2 = false;
+    }
+
+    for (int i = 0; i < bulletvecLeft2.size(); i += 45)
+    {
+        bulletvecLeft2[i].draw(window);
+        bulletvecRight2[i].draw(window);
+        bulletvecLeft2[i].fire(2);
+        bulletvecRight2[i].fire(2);
     }
 
     window.display();
