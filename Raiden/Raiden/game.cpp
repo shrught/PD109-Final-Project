@@ -70,6 +70,8 @@ void Game::run() {
   std::vector<FBullet> bulletvecRight;
   std::vector<FBullet> bulletvecLeft2;
   std::vector<FBullet> bulletvecRight2;
+  std::vector<FBullet> bulletvecLeftLCK;
+  std::vector<FBullet> bulletvecRightLCK;
   std::vector<Enemy> dogs;
   std::vector<Enemy> biggerDogs;
   bool isFiring = false;
@@ -197,21 +199,6 @@ void Game::run() {
       bulletvecRight[i].fire(2);
     }
 
-    if (playerNum == 2) {
-      player2.draw(window);
-      float hpPercent2 = static_cast<float>(player2.health) / player2.maxHealth;
-      playerHpBar2.setSize(
-          sf::Vector2f(300.f * hpPercent2, playerHpBar2.getSize().y));
-      window.draw(playerHpBarBack2);
-      window.draw(playerHpBar2);
-    }
-    // Enemy dog(400, 400, 1, window);
-
-    float hpPercent = static_cast<float>(player1.health) / player1.maxHealth;
-    playerHpBar.setSize(
-        sf::Vector2f(300.f * hpPercent, playerHpBar.getSize().y));
-    window.draw(playerHpBarBack);
-    window.draw(playerHpBar);
 
     if(isFiring == true)
     {
@@ -245,6 +232,30 @@ void Game::run() {
         bulletvecRight2.push_back(newBulletRight2);
         isFiring2 = false;
     }
+      
+      sf::Color pR = sf::Color::Red;
+      FBullet newBulletLeftLCK(sf::Vector2f(10,20), pR);
+      FBullet newBulletRightLCK(sf::Vector2f(10,20), pR);
+      newBulletLeftLCK.setPos(sf::Vector2f(LCK.getX() + LCK.planeWidth() * (3/7),LCK.getY()));
+      newBulletRightLCK.setPos(sf::Vector2f(LCK.getX() + LCK.planeWidth(), LCK.getY()));
+      bulletvecLeftLCK.push_back(newBulletLeftLCK);
+      bulletvecRightLCK.push_back(newBulletRightLCK);
+      
+      for (int i = 0; i < bulletvecLeftLCK.size(); i += 50)
+      {
+          player1.checkCollision(bulletvecLeftLCK[i]);
+          player1.checkCollision(bulletvecRightLCK[i]);
+          if (playerNum == 2)
+          {
+              player2.checkCollision(bulletvecLeftLCK[i]);
+              player2.checkCollision(bulletvecRightLCK[i]);
+          }
+          bulletvecLeftLCK[i].draw(window);
+          bulletvecRightLCK[i].draw(window);
+          bulletvecLeftLCK[i].fire(-10);
+          bulletvecRightLCK[i].fire(-10);
+      }
+
 
     for (int i = 0; i < bulletvecLeft2.size(); i += 10)
     {
@@ -255,6 +266,23 @@ void Game::run() {
         bulletvecLeft2[i].fire(20);
         bulletvecRight2[i].fire(20);
     }
+      
+      
+    if (playerNum == 2) {
+      player2.draw(window);
+      float hpPercent2 = static_cast<float>(player2.health) / player2.maxHealth;
+      playerHpBar2.setSize(
+          sf::Vector2f(300.f * hpPercent2, playerHpBar2.getSize().y));
+      window.draw(playerHpBarBack2);
+      window.draw(playerHpBar2);
+    }
+  // Enemy dog(400, 400, 1, window);
+
+    float hpPercent = static_cast<float>(player1.health) / player1.maxHealth;
+    playerHpBar.setSize(
+        sf::Vector2f(300.f * hpPercent, playerHpBar.getSize().y));
+    window.draw(playerHpBarBack);
+    window.draw(playerHpBar);
       
     if (LCK.getAlive() == 0)
     {

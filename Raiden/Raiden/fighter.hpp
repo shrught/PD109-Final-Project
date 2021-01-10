@@ -34,8 +34,8 @@ private:
     Texture t_plane;
     Sprite plane;
     
-    int health = 100;
-    int maxHealth = 100;
+    int health = 10000;
+    int maxHealth = 10000;
     int life = 3;
     int points = 0;
     int bulletType = 1;
