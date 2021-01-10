@@ -173,14 +173,14 @@ void Game::run() {
         for (int i = 0; i < dogs.size(); i += 120) {
           dogs[i].draw(window);
           dogs[i].fly(3);
-          if (dogs[i].life == 0)
+          if (dogs[i].life <= 0)
             break;
         }
 
         for (int i = 0; i < biggerDogs.size(); i += 120) {
           biggerDogs[i].draw(window);
           biggerDogs[i].fly(5);
-          if (dogs[i].life == 0)
+          if (biggerDogs[i].life <= 0)
             break;
         }
       }

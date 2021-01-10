@@ -17,9 +17,8 @@ Enemy::Enemy(float x_, float y_, RenderWindow& window, double size) {
   pdogs.setTexture(graphic);
   pdogs.setPosition(Vector2f(x_, y_));
   pdogs.setScale(size / 10, size / 10);
-  life = 10;
-  this->size = size;
-  // window.draw(pdogs);
+  life = 5;
+
 }
 
 void Enemy::fly(int speed) {
