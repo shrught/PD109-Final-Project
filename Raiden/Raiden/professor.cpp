@@ -19,6 +19,10 @@ Boss::Boss()
     plane.setTexture(t_plane);
     plane.setScale(0.4, 0.4);
     plane.setPosition(WIDTH / 2, HEIGHT * 1 / 10);
+    
+    planeHit.setTexture(t_plane);
+    planeHit.setScale(0.4, 0.4);
+    planeHit.setColor(sf::Color::Red);
 }
 
 float Boss::getX() const
@@ -87,10 +91,15 @@ void Boss::move()
     
 }
 
-void Boss::checkCollision(FBullet bullet)
+void Boss::checkCollision(FBullet& bullet)
 {
     if (bullet.getTop() >= getY() + planeHeight() && bullet.getLeft() >= getX() && bullet.getRight() <= getX() + planeWidth())
+    {
         health -= 50;
+        planeHit.setPosition(getX(), getY());
+        showHit = 1;
+        bullet.setPos(Vector2f (100000,0));
+    }
     if (health <= 0)
     {
         alive = 0;
@@ -100,5 +109,16 @@ void Boss::checkCollision(FBullet bullet)
 
 void Boss::draw(RenderWindow& window)
 {
-    window.draw(plane);
+    if (showHit == 0)
+        window.draw(plane);
+    else
+    {
+        window.draw(planeHit);
+        showHit = 0;
+    }
+}
+
+bool Boss::getAlive() const
+{
+    return alive;
 }

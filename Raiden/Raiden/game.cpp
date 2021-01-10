@@ -74,6 +74,7 @@ void Game::run() {
   std::vector<Enemy> biggerDogs;
   bool isFiring = false;
   bool isFiring2 = false;
+  int WinTime = 0;
 
   while (window.isOpen()) {
     float dt = clock.restart().asSeconds();
@@ -170,26 +171,27 @@ void Game::run() {
       biggerDogs.push_back(biggerDog);
     }
 
-    for (int i = 0; i < dogs.size(); i += 120) {
-      dogs[i].draw(window);
-      dogs[i].fly(3);
-      if (dogs[i].life == 0) {
-        break;
-      }
-    }
+      if (WinTime <= 0)
+      {
+        for (int i = 0; i < dogs.size(); i += 120) {
+          dogs[i].draw(window);
+          dogs[i].fly(3);
+          if (dogs[i].life == 0)
+            break;
+        }
 
-    for (int i = 0; i < biggerDogs.size(); i += 120) {
-      biggerDogs[i].draw(window);
-      biggerDogs[i].fly(5);
-      if (dogs[i].life == 0) {
-        break;
+        for (int i = 0; i < biggerDogs.size(); i += 120) {
+          biggerDogs[i].draw(window);
+          biggerDogs[i].fly(5);
+          if (dogs[i].life == 0)
+            break;
+        }
       }
-    }
 
     // dog.update(window);
     // seconds = 0;  // Resets the secondcounter.
 
-    for (int i = 0; i < bulletvecLeft.size(); i += 45) {
+    for (int i = 0; i < bulletvecLeft.size(); i += 10) {
       bulletvecLeft[i].fire(2);
       bulletvecRight[i].draw(window);
       bulletvecRight[i].fire(2);
@@ -246,10 +248,19 @@ void Game::run() {
 
     for (int i = 0; i < bulletvecLeft2.size(); i += 10)
     {
+        LCK.checkCollision(bulletvecLeft2[i]);
+        LCK.checkCollision(bulletvecRight2[i]);
         bulletvecLeft2[i].draw(window);
         bulletvecRight2[i].draw(window);
         bulletvecLeft2[i].fire(20);
         bulletvecRight2[i].fire(20);
+    }
+      
+    if (LCK.getAlive() == 0)
+    {
+        WinTime++;
+        if (WinTime > 200)
+            window.clear();
     }
 
     window.display();
