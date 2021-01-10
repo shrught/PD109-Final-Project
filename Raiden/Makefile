@@ -1,11 +1,17 @@
 # run: objects
 
-run: Raiden/main.o Raiden/menu.o Raiden/info.o Raiden/game.o
-	@g++ game.o info.o menu.o main.o -o RGame -lsfml-window -lsfml-graphics -lsfml-system -lsfml-audio
+run: Raiden/main.o Raiden/menu.o Raiden/info.o Raiden/game.o Raiden/Firebullet.o Raiden/enemy.o
+	@g++ game.o enemy.o Firebullet.o info.o menu.o main.o -o RGame -lsfml-window -lsfml-graphics -lsfml-system -lsfml-audio
 
 
 dir:
 	@if [ ! -d "obj" ]; then mkdir obj; fi
+
+Raiden/enemy.o:
+	@g++ -w Raiden/enemy.cpp -o enemy.o -c
+
+Raiden/Firebullet.o:
+	@g++ -w Raiden/Firebullet.cpp -o Firebullet.o -c
 
 Raiden/main.o: Raiden/main.cpp
 	@g++ -w Raiden/main.cpp -o main.o -c
