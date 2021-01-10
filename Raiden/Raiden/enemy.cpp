@@ -2,8 +2,13 @@
 using namespace std;
 #include <iostream>
 
-Enemy::Enemy(float x_, float y_, RenderWindow& window) {
-  graphic.loadFromFile("Raiden/Resources/images/pdogs.png");
+Enemy::Enemy(float x_, float y_, RenderWindow& window)
+{
+    if (!graphic.loadFromFile("Raiden/Resources/images/pdogs.png"))
+    {
+        graphic.loadFromFile("../Resources/images/pdogs.png");
+    }
+  
   // graphic.loadFromFile("../Resources/images/pdogs.png");
   pdogs.setTexture(graphic);
   pdogs.setPosition(Vector2f(x_, y_));
