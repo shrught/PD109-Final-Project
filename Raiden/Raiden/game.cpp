@@ -27,11 +27,17 @@ void Game::run() {
   if (!t_vesta.loadFromFile("Raiden/Resources/images/Vesta.jpg")) {
     t_vesta.loadFromFile("../Resources/images/Vesta.jpg");
   }
+    
+  if (!t_victory.loadFromFile("Raiden/Resources/images/victory.jpg")) {
+        t_victory.loadFromFile("../Resources/images/victory.jpg");
+    }
 
   RenderWindow window(VideoMode(WIDTH, HEIGHT), "RAIDEN");
   window.setFramerateLimit(60);
   vesta.setTexture(t_vesta);
   vesta.setPosition(0, 0);
+  victory.setTexture(t_victory);
+  victory.setPosition(0, 0);
 
   // window.setKetRepeatEnabled = true;
 
@@ -294,7 +300,10 @@ void Game::run() {
     {
         WinTime++;
         if (WinTime > 200)
+        {
             window.clear();
+            window.draw(victory);
+        }
     }
 
     window.display();

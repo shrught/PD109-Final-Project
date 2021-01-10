@@ -32,6 +32,8 @@ class Game
 private:
     Texture t_vesta;
     Sprite vesta;
+    Texture t_victory;
+    Sprite victory;
     RenderWindow window;
     
     Fighter player1;

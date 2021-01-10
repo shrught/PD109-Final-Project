@@ -75,11 +75,11 @@ void Fighter::move(float x, float y)
 
 void Fighter::checkCollision(FBullet bullet)
 {
-    if (bullet.getBottom() >= getY() && bullet.getLeft() >= getX() && bullet.getRight() <= getX() + planeWidth())
+    if (bullet.getBottom() >= getY() && bullet.getTop() <= getY() + planeHeight() && bullet.getLeft() >= getX() && bullet.getRight() <= getX() + planeWidth())
     {
         health -= 50;
         std::cout << "collision";
-        bullet.setPos(Vector2f(1058, 1058));
+        bullet.setPos(Vector2f(10580, 10580));
     }
     if (health <= 0)
     {
