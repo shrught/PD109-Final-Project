@@ -8,9 +8,16 @@ FBullet::FBullet(sf::Vector2f size){
     bullet.setFillColor(sf::Color::Blue);
 }
 
+FBullet::FBullet(sf::Vector2f size,sf::Color &bulletColor){
+    bullet.setSize(size);
+    bullet.setFillColor(bulletColor);
+}
+
 void FBullet::fire(int speed){
     bullet.move(0,-speed);
 }
+
+
 
 int FBullet::getRight(){
     return bullet.getPosition().x + bullet.getSize().x;

@@ -3,8 +3,8 @@
 
 Enemy::Enemy(float x_, float y_, float speed, RenderWindow& window)
 {
-  //graphic.loadFromFile("Raiden/Resources/images/pdogs.png");
-  graphic.loadFromFile("../Resources/images/pdogs.png");
+  graphic.loadFromFile("Raiden/Resources/images/pdogs.png");
+  //graphic.loadFromFile("../Resources/images/pdogs.png");
   pdogs.setPosition(Vector2f(x_, y_));
   pdogs.setScale(0.4, 0.4);
   window.draw(pdogs);

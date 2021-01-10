@@ -10,6 +10,7 @@ class FBullet{
 
     public:
     FBullet(sf::Vector2f size);
+    FBullet(sf::Vector2f size, sf::Color &bulletColor);
 
     void setDirection();
     void fire(int speed);

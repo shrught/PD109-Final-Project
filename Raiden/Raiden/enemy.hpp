@@ -7,7 +7,7 @@
 #include "game.hpp"
 using namespace sf;
 
-class Enemy {
+class Enemy{
  public:
   Enemy(float x_, float y_, float speed, RenderWindow&);
   Sprite pdogs;

@@ -24,10 +24,10 @@ Game::~Game() { window.create(VideoMode(WIDTH, HEIGHT), "RAIDEN"); }
 
 void Game::run() {
     
-  t_vesta.loadFromFile("../Resources/images/Vesta.jpg");
-  t_plane.loadFromFile("../Resources/images/plane.png");
-  //t_vesta.loadFromFile("Raiden/Resources/images/Vesta.jpg");
-  //t_plane.loadFromFile("Raiden/Resources/images/plane.png");
+  //t_vesta.loadFromFile("../Resources/images/Vesta.jpg");
+  //t_plane.loadFromFile("../Resources/images/plane.png");
+  t_vesta.loadFromFile("Raiden/Resources/images/Vesta.jpg");
+  t_plane.loadFromFile("Raiden/Resources/images/plane.png");
   RenderWindow window(VideoMode(WIDTH, HEIGHT), "RAIDEN");
 
   vesta.setTexture(t_vesta);
@@ -117,7 +117,7 @@ void Game::run() {
     
       if (Keyboard::isKeyPressed(Keyboard::Enter))
       {
-          std::cout << "player two";
+          //std::cout << "player two";
           playerNum = 2;
       }
       
@@ -172,7 +172,7 @@ void Game::run() {
         isFiring = false;
         }
 
-        for(int i = 0; i < bulletvecLeft.size();i += 40){
+        for(int i = 0; i < bulletvecLeft.size();i += 45){
             bulletvecLeft[i].draw(window);
             bulletvecLeft[i].fire(2);
             bulletvecRight[i].draw(window);
@@ -180,8 +180,9 @@ void Game::run() {
 
         }
     if(isFiring2 == true){
-      FBullet newBulletLeft2(sf::Vector2f(10,20));
-      FBullet newBulletRight2(sf::Vector2f(10,20));
+      sf::Color p2B = sf::Color::Green;
+      FBullet newBulletLeft2(sf::Vector2f(10,20),p2B);
+      FBullet newBulletRight2(sf::Vector2f(10,20),p2B);
       newBulletLeft2.setPos(sf::Vector2f(plane2.getPosition().x + plane2.getGlobalBounds().width * (3/7),plane2.getPosition().y));
       newBulletRight2.setPos(sf::Vector2f(plane2.getPosition().x + plane2.getGlobalBounds().width, plane2.getPosition().y));
       bulletvecLeft2.push_back(newBulletLeft2);
@@ -189,7 +190,7 @@ void Game::run() {
       isFiring2 = false;
       }
 
-      for(int i = 0; i < bulletvecLeft2.size();i += 40){
+      for(int i = 0; i < bulletvecLeft2.size();i += 45){
           bulletvecLeft2[i].draw(window);
           bulletvecRight2[i].draw(window);
           bulletvecLeft2[i].fire(2);
