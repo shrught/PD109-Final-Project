@@ -7,3 +7,63 @@
 //
 
 #include "fighter.hpp"
+
+int Fighter::playerNum = 0;
+
+int Fighter::getPlayerNum() const
+{
+    return playerNum;
+}
+
+
+Fighter::Fighter()
+{
+    Fighter::playerNum ++;
+    if (!t_plane.loadFromFile("../Resources/images/plane.png"))
+    {
+        t_plane.loadFromFile("Raiden/Resources/images/plane.png");
+    }
+    //t_plane.loadFromFile("Raiden/Resources/images/plane.png");
+    plane.setTexture(t_plane);
+    plane.setScale(0.4, 0.4);
+    if (playerNum == 1)
+        plane.setPosition(WIDTH / 2, HEIGHT * 9 / 10);
+    else if (playerNum == 2)
+        plane.setPosition(WIDTH / 2 + planeWidth() + 50, HEIGHT * 9 / 10);
+}
+
+float Fighter::getX() const
+{
+    return plane.getPosition().x;
+}
+
+float Fighter::getY() const
+{
+    return plane.getPosition().y;
+}
+
+float Fighter::planeWidth() const
+{
+    return plane.getGlobalBounds().width;
+}
+
+float Fighter::planeHeight() const
+{
+    return plane.getGlobalBounds().height;
+}
+
+void Fighter::setPosition(float x, float y)
+{
+    plane.setPosition(x, y);
+}
+
+void Fighter::move(float x, float y)
+{
+    plane.move(x, y);
+}
+
+void Fighter::draw(RenderWindow& window)
+{
+    window.draw(plane);
+}
+
