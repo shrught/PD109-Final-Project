@@ -14,10 +14,12 @@ class Enemy {
   void fly(int speed);
   int life;
   void checkCollision(FBullet bullet);
+  
 
  private:
   float x_;
   float y_;
+  double size;
   Sprite pdogs;
   Texture graphic;
   
