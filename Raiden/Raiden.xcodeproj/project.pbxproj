@@ -14,6 +14,7 @@
 		8F35AF5B25A95A3000E333A0 /* fighter.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F35AF5925A95A3000E333A0 /* fighter.cpp */; };
 		8F35AF6125A9A9FA00E333A0 /* Firebullet.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F35AF6025A9A9FA00E333A0 /* Firebullet.cpp */; };
 		8F35AF6525A9C5D700E333A0 /* enemy.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F35AF6425A9C5D700E333A0 /* enemy.cpp */; };
+		8F35AF6E25AB211000E333A0 /* professor.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8F35AF6D25AB211000E333A0 /* professor.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,8 @@
 		8F35AF5F25A9A9F900E333A0 /* Firebullet.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = Firebullet.hpp; path = "/Users/wangyanpu/Desktop/台灣大學/大二上/程設設計/Final Project/PD109-Final-Project/Raiden/Raiden/Firebullet.hpp"; sourceTree = "<absolute>"; };
 		8F35AF6025A9A9FA00E333A0 /* Firebullet.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = Firebullet.cpp; path = "/Users/wangyanpu/Desktop/台灣大學/大二上/程設設計/Final Project/PD109-Final-Project/Raiden/Raiden/Firebullet.cpp"; sourceTree = "<absolute>"; };
 		8F35AF6425A9C5D700E333A0 /* enemy.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = enemy.cpp; path = "/Users/wangyanpu/Desktop/台灣大學/大二上/程設設計/Final Project/PD109-Final-Project/Raiden/Raiden/enemy.cpp"; sourceTree = "<absolute>"; };
+		8F35AF6C25AB211000E333A0 /* professor.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; name = professor.hpp; path = "/Users/wangyanpu/Desktop/台灣大學/大二上/程設設計/Final Project/PD109-Final-Project/Raiden/Raiden/professor.hpp"; sourceTree = "<absolute>"; };
+		8F35AF6D25AB211000E333A0 /* professor.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = professor.cpp; path = "/Users/wangyanpu/Desktop/台灣大學/大二上/程設設計/Final Project/PD109-Final-Project/Raiden/Raiden/professor.cpp"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +81,8 @@
 				8F35AF6425A9C5D700E333A0 /* enemy.cpp */,
 				8F35AF6025A9A9FA00E333A0 /* Firebullet.cpp */,
 				8F35AF5F25A9A9F900E333A0 /* Firebullet.hpp */,
+				8F35AF6C25AB211000E333A0 /* professor.hpp */,
+				8F35AF6D25AB211000E333A0 /* professor.cpp */,
 				8F35AF3B25A889D400E333A0 /* Resources */,
 			);
 			path = Raiden;
@@ -150,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8F35AF4A25A88B4900E333A0 /* menu.cpp in Sources */,
+				8F35AF6E25AB211000E333A0 /* professor.cpp in Sources */,
 				8F35AF3A25A889D400E333A0 /* main.cpp in Sources */,
 				8F35AF4F25A88CB600E333A0 /* info.cpp in Sources */,
 				8F35AF5B25A95A3000E333A0 /* fighter.cpp in Sources */,

@@ -1,32 +1,68 @@
 #include "enemy.hpp"
-#include <iostream>
 
-Enemy::Enemy(float x_, float y_, float speed, RenderWindow& window)
+#include <iostream>
+using namespace std;
+using namespace sf;
+
+void Enemy::draw(sf::RenderWindow& window)
 {
-  graphic.loadFromFile("Raiden/Resources/images/pdogs.png");
-  //graphic.loadFromFile("../Resources/images/pdogs.png");
-  pdogs.setPosition(Vector2f(x_, y_));
-  pdogs.setScale(0.4, 0.4);
+  pdogs.setTexture(graphic);
   window.draw(pdogs);
 }
 
-void Enemy::update() {
-  Clock clock;
-  double dt;
-  dt = clock.restart().asSeconds();
-  pdogs.move(0, speed * dt);
-    
+Enemy::Enemy(float x_, float y_, RenderWindow& window, double size) {
+  if (!graphic.loadFromFile("Raiden/Resources/images/pdogs.png")) {
+    graphic.loadFromFile("../Resources/images/pdogs.png");
+  }
+  // graphic.loadFromFile("../Resources/images/pdogs.png");
+  pdogs.setTexture(graphic);
+  pdogs.setPosition(Vector2f(x_, y_));
+  pdogs.setScale(size / 10, size / 10);
+  life = 1;
+
 }
 
-// const int MAX_ENTITES = 100;
-
-// std::vector<Enemy *> v;
-
-// Pdogs* pdogs = new Pdogs("pdogs.png");
-//寫一個random生成？
-
-void Enemy::run(RenderWindow& window)
+void Enemy::setPos(float x, float y)
 {
-  Enemy dog(400, 300, 1, window);
-  dog.update();
+    pdogs.setPosition(x, y);
+}
+
+float Enemy::getTop() const
+{
+    return pdogs.getPosition().y;
+}
+
+float Enemy::getBottom() const
+{
+    return pdogs.getPosition().y + pdogs.getGlobalBounds().height;
+}
+float Enemy::getLeft() const
+{
+    return pdogs.getPosition().x;
+}
+
+float Enemy::getRight() const
+{
+    return pdogs.getPosition().x + pdogs.getGlobalBounds().width;
+}
+
+void Enemy::fly(int speed) {
+  pdogs.setTexture(graphic);
+  pdogs.move(0, speed);
+}
+
+void Enemy::checkCollision(FBullet& bullet)
+{
+  if (bullet.getTop() <= pdogs.getPosition().y + pdogs.getGlobalBounds().height &&
+      bullet.getBottom() >= pdogs.getPosition().y &&
+      bullet.getLeft() >= pdogs.getPosition().x &&
+      bullet.getRight() <= pdogs.getPosition().x + pdogs.getGlobalBounds().width )
+  {
+    life -= 1;
+    bullet.setPos(Vector2f(104800, 104800));
+    if (life <= 0) {
+      pdogs.setPosition(Vector2f(104800, 104800));
+    }
+    cout << "life " << life << endl;
+  }
 }

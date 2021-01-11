@@ -2,6 +2,8 @@
 #include <SFML/GpuPreference.hpp>
 #include <iostream>
 
+using namespace sf;
+
 
 FBullet::FBullet(sf::Vector2f size){
     bullet.setSize(size);
@@ -14,6 +16,8 @@ FBullet::FBullet(sf::Vector2f size,sf::Color &bulletColor){
 }
 
 void FBullet::fire(int speed){
+//    if (getBottom() >= 0 && getTop() <= HEIGHT)
+//        bullet.move(0,-speed);
     bullet.move(0,-speed);
 }
 
@@ -35,8 +39,10 @@ int FBullet::getBottom(){
     return bullet.getPosition().y + bullet.getSize().y;
 }
 
-void FBullet::draw(sf::RenderWindow &window){
-    window.draw(bullet);
+void FBullet::draw(sf::RenderWindow &window)
+{
+    if (getBottom() >= 0 && getTop() <= HEIGHT + 200)
+        window.draw(bullet);
 }
 
 void FBullet::setPos(sf::Vector2f newPos){

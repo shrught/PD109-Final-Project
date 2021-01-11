@@ -19,6 +19,7 @@
 #include "fighter.hpp"
 #include "enemy.hpp"
 #include "Firebullet.hpp"
+#include "professor.hpp"
 
 using namespace sf;
 
@@ -31,14 +32,23 @@ class Game
 private:
     Texture t_vesta;
     Sprite vesta;
+    Texture t_victory;
+    Sprite victory;
+    Texture t_defeated;
+    Sprite defeated;
     RenderWindow window;
     
-    Fighter player1;
-    Fighter player2;
+    Fighter* player1 = nullptr;
+    Fighter* player2 = nullptr;
+    Boss* LCK;
     int playerNum = 1;
+    int bulletSpacing = 10;
+    int bosebulSpacing = 50;
 public:
     Game(); // init
     ~Game();
     void run();
+    void reset();
+    void deleteBullet(std::vector<FBullet>&, int);
 };
 

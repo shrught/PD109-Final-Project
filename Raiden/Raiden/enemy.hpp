@@ -1,25 +1,32 @@
 #pragma once
-
 #include <ctime>
 #include <iostream>
 
+#include "Firebullet.hpp"
 #include "config.h"
-#include "game.hpp"
+//#include "game.hpp"
 using namespace sf;
 
-class Enemy{
+class Enemy {
+    friend class Fighter;
  public:
-  Enemy(float x_, float y_, float speed, RenderWindow&);
-  Sprite pdogs;
-
-  void run(RenderWindow& window);
+  Enemy(float x_, float y_, RenderWindow&,double size);
+  void draw(RenderWindow& window);
+  void fly(int speed);
+  void setPos(float x, float y);
+  float getTop() const;
+  float getBottom() const;
+  float getLeft() const;
+  float getRight() const;
+  int life;
+  void checkCollision(FBullet& bullet);
+  
 
  private:
   float x_;
   float y_;
-  float speed;
+  double size;
+  Sprite pdogs;
   Texture graphic;
-    void update();
-
+  
 };
-
