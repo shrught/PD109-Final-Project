@@ -43,6 +43,11 @@ Fighter::Fighter()
         plane.setPosition(WIDTH / 2 + planeWidth() + 50, HEIGHT * 9 / 10);
 }
 
+Fighter::~Fighter()
+{
+    Fighter::playerNum--;
+}
+
 float Fighter::getX() const
 {
     return plane.getPosition().x;
@@ -73,7 +78,7 @@ void Fighter::move(float x, float y)
     plane.move(x, y);
 }
 
-void Fighter::checkCollision(FBullet bullet)
+void Fighter::checkCollision(FBullet& bullet)
 {
     if (bullet.getBottom() >= getY() && bullet.getTop() <= getY() + planeHeight() && bullet.getLeft() >= getX() && bullet.getRight() <= getX() + planeWidth())
     {
@@ -83,13 +88,38 @@ void Fighter::checkCollision(FBullet bullet)
     }
     if (health <= 0)
     {
-        life -= 1;
+        alive = 0;
         plane.setPosition(Vector2f(4234432, 4234423));
+    }
+}
+
+void Fighter::checkCollisionEnemy(Enemy& enemy)
+{
+    if (enemy.getBottom() >= getY() && enemy.getTop() <= getY() + planeHeight())
+    {
+        if (enemy.getRight() > getX() && enemy.getLeft() < getX())
+        {
+            health -= 200;
+            std::cout << "collision dog";
+            enemy.setPos(10580, 10580);
+        }
+        else if (enemy.getRight() > getX() + planeWidth() && enemy.getLeft() < getX() + planeWidth())
+        {
+            health -= 200;
+            std::cout << "collision dog";
+            enemy.setPos(10580, 10580);
+        }
     }
 }
 
 void Fighter::draw(RenderWindow& window)
 {
     window.draw(plane);
+}
+
+void Fighter::reset()
+{
+    health = maxHealth;
+    plane.setPosition(WIDTH / 2, HEIGHT * 9 / 10);
 }
 

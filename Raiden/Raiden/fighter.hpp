@@ -10,6 +10,7 @@
 #include "config.h"
 #include <SFML/Graphics.hpp>
 #include "Firebullet.hpp"
+#include "enemy.hpp"
 
 using namespace sf;
 
@@ -19,6 +20,7 @@ class Fighter
 public:
     
     Fighter();
+    ~Fighter();
     float getX() const;
     float getY() const;
     void setPosition(float x, float y);
@@ -26,8 +28,10 @@ public:
     float planeWidth() const;
     float planeHeight() const;
     int getPlayerNum() const;
-    void checkCollision(FBullet bullet);
+    void checkCollision(FBullet& bullet);
+    void checkCollisionEnemy(Enemy& enemy);
     void draw(RenderWindow& window);
+    void reset();
 
     
 private:
@@ -35,7 +39,7 @@ private:
     Sprite plane;
     
     int health = 1000;
-    int maxHealth = 1000;
+    const int maxHealth = 1000;
     int life = 3;
     int points = 0;
     int bulletType = 1;

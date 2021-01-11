@@ -23,6 +23,7 @@ private:
     
 public:
     Boss();
+    void reset();
     float getX() const;
     float getY() const;
     void setPosition(float x, float y);
@@ -33,5 +34,6 @@ public:
     void checkCollision(FBullet& bullet);
     void draw(RenderWindow& window);
     bool getAlive() const;
+    int getHealth() const;
     
 };

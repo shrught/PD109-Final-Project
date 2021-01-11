@@ -16,6 +16,8 @@ FBullet::FBullet(sf::Vector2f size,sf::Color &bulletColor){
 }
 
 void FBullet::fire(int speed){
+//    if (getBottom() >= 0 && getTop() <= HEIGHT)
+//        bullet.move(0,-speed);
     bullet.move(0,-speed);
 }
 
@@ -39,17 +41,8 @@ int FBullet::getBottom(){
 
 void FBullet::draw(sf::RenderWindow &window)
 {
-//    SoundBuffer bShoot;
-//    if (!bShoot.loadFromFile("Raiden/Resources/audio/shooting.WAV"))
-//    {
-//        bShoot.loadFromFile("../Resources/audio/shooting.WAV");
-//    }
-//    Sound shoot;
-//    shoot.setVolume(50);
-//    shoot.setBuffer(bShoot);
-      
-    window.draw(bullet);
-//    shoot.play();
+    if (getBottom() >= 0 && getTop() <= HEIGHT + 200)
+        window.draw(bullet);
 }
 
 void FBullet::setPos(sf::Vector2f newPos){

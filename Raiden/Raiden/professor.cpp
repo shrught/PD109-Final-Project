@@ -93,12 +93,12 @@ void Boss::move()
 
 void Boss::checkCollision(FBullet& bullet)
 {
-    if (bullet.getTop() >= getY() + planeHeight() && bullet.getLeft() >= getX() && bullet.getRight() <= getX() + planeWidth())
+    if (bullet.getTop() <= getY() + planeHeight() && bullet.getBottom() >= getY() && bullet.getLeft() >= getX() && bullet.getRight() <= getX() + planeWidth())
     {
         health -= 50;
         planeHit.setPosition(getX(), getY());
         showHit = 1;
-        bullet.setPos(Vector2f (100000,0));
+        bullet.setPos(Vector2f (100000,100390));
     }
     if (health <= 0)
     {
@@ -121,4 +121,17 @@ void Boss::draw(RenderWindow& window)
 bool Boss::getAlive() const
 {
     return alive;
+}
+
+int Boss::getHealth() const
+{
+    return health;
+}
+
+void Boss::reset()
+{
+    plane.setPosition(WIDTH / 2, HEIGHT * 1 / 10);
+    health = 10000;
+    alive = 1;
+    moveType = 1;
 }
