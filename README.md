@@ -11,3 +11,5 @@
 5.Type and execute "./RGame" in your terminal
 
 6.Enjoy the Game
+
+7.If you're finished, type and execute "make clean" in your terminal to clean out
